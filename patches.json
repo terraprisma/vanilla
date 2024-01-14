@@ -2,53 +2,72 @@
   "dependencies": [],
   "nodes": [
     {
-      "type": "depot",
-      "depot": "TerrariaRelease",
-      "workspace": "TerrariaClientWindows",
-      "patches": "patches/TerrariaClientWindows",
-      "path": "Terraria.exe",
+      "kind": "depot",
+      "name": "TerrariaClientWindows",
+      "patchDir": "patches/TerrariaClientWindows",
+      "data": {
+        "pathToExecutable": "Terraria.exe",
+        "appId": 105600,
+        "depotId": 105601
+      },
       "children": [
         {
-          "type": "depot",
-          "depot": "TerrariaLinux",
-          "workspace": "TerrariaClientLinux",
-          "patches": "patches/TerrariaClientLinux",
-          "path": "Terraria.exe"
+          "kind": "depot",
+          "name": "TerrariaClientLinux",
+          "patchDir": "patches/TerrariaClientLinux",
+          "data": {
+            "pathToExecutable": "Terraria.exe",
+            "appId": 105600,
+            "depotId": 105602
+          }
         },
         {
-          "type": "depot",
-          "depot": "TerrariaMac",
-          "workspace": "TerrariaClientMac",
-          "patches": "patches/TerrariaClientMac",
-          "path": "Terraria.app/Contents/Resources/Terraria.exe"
+          "kind": "depot",
+          "name": "TerrariaClientMac",
+          "patchDir": "patches/TerrariaClientMac",
+          "data": {
+            "pathToExecutable": "Terraria.app/Contents/Resources/Terraria.exe",
+            "appId": 105600,
+            "depotId": 105603
+          }
         },
         {
-          "type": "depot",
-          "depot": "TerrariaRelease",
-          "workspace": "TerrariaServerWindows",
-          "patches": "patches/TerrariaServerWindows",
-          "path": "TerrariaServer.exe",
+          "kind": "depot",
+          "name": "TerrariaServerWindows",
+          "patchDir": "patches/TerrariaServerWindows",
+          "data": {
+            "pathToExecutable": "TerrariaServer.exe",
+            "appId": 105600,
+            "depotId": 105601
+          },
           "children": [
             {
-              "type": "depot",
-              "depot": "TerrariaLinux",
-              "workspace": "TerrariaServerLinux",
-              "patches": "patches/TerrariaServerLinux",
-              "path": "TerrariaServer.exe"
+              "kind": "depot",
+              "name": "TerrariaServerLinux",
+              "patchDir": "patches/TerrariaServerLinux",
+              "data": {
+                "pathToExecutable": "TerrariaServer.exe",
+                "appId": 105600,
+                "depotId": 105602
+              }
             },
             {
-              "type": "depot",
-              "depot": "TerrariaMac",
-              "workspace": "TerrariaServerMac",
-              "patches": "patches/TerrariaServerMac",
-              "path": "Terraria.app/Contents/Resources/TerrariaServer.exe"
+              "kind": "depot",
+              "name": "TerrariaServerMac",
+              "patchDir": "patches/TerrariaServerMac",
+              "data": {
+                "pathToExecutable": "Terraria.app/Contents/Resources/TerrariaServer.exe",
+                "appId": 105600,
+                "depotId": 105603
+              }
             }
           ]
         },
         {
-          "type": "mod",
+          "kind": "mod",
           "name": "TerrariaBuildable",
-          "patches": "patches/TerrariaBuildable",
+          "patchDir": "patches/TerrariaBuildable",
+          "data": {},
           "children": []
         }
       ]
