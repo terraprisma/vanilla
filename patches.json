@@ -5,36 +5,42 @@
       "type": "depot",
       "depot": "TerrariaRelease",
       "workspace": "TerrariaClientWindows",
+      "patches": "patches/TerrariaClientWindows",
       "path": "Terraria.exe",
       "children": [
         {
           "type": "depot",
           "depot": "TerrariaLinux",
           "workspace": "TerrariaClientLinux",
+          "patches": "patches/TerrariaClientLinux",
           "path": "Terraria.exe"
         },
         {
           "type": "depot",
           "depot": "TerrariaMac",
           "workspace": "TerrariaClientMac",
+          "patches": "patches/TerrariaClientMac",
           "path": "Terraria.app/Contents/Resources/Terraria.exe"
         },
         {
           "type": "depot",
           "depot": "TerrariaRelease",
           "workspace": "TerrariaServerWindows",
+          "patches": "patches/TerrariaServerWindows",
           "path": "TerrariaServer.exe",
           "children": [
             {
               "type": "depot",
               "depot": "TerrariaLinux",
               "workspace": "TerrariaServerLinux",
+              "patches": "patches/TerrariaServerLinux",
               "path": "TerrariaServer.exe"
             },
             {
               "type": "depot",
               "depot": "TerrariaMac",
               "workspace": "TerrariaServerMac",
+              "patches": "patches/TerrariaServerMac",
               "path": "Terraria.app/Contents/Resources/TerrariaServer.exe"
             }
           ]
@@ -42,6 +48,7 @@
         {
           "type": "mod",
           "name": "TerrariaBuildable",
+          "patches": "patches/TerrariaBuildable",
           "children": []
         }
       ]
