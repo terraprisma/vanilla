@@ -5,10 +5,9 @@
  	public static string CloudPlayerPath = "players";
  
 -	public static Preferences Configuration = new Preferences(SavePath + Path.DirectorySeparatorChar + "config.json");
--
--	public static Preferences InputProfiles = new Preferences(SavePath + Path.DirectorySeparatorChar + "input profiles.json");
 +	public static Preferences Configuration;
-+
+ 
+-	public static Preferences InputProfiles = new Preferences(SavePath + Path.DirectorySeparatorChar + "input profiles.json");
 +	public static Preferences InputProfiles;
  
  	public static KeyboardState inputText;
@@ -112,10 +111,9 @@
 -		14, 6, 6, 6, 6, 6, 2, 4, 14, 14,
 -		14, 14, 14, 14, 14, 1, 1, 13
 -	};
--
--	public static Dictionary<int, byte> npcLifeBytes = new Dictionary<int, byte>();
 +	public static int[] npcFrameCount;
-+
+ 
+-	public static Dictionary<int, byte> npcLifeBytes = new Dictionary<int, byte>();
 +	public static Dictionary<int, byte> npcLifeBytes;
  
  	public static bool mouseExit;
@@ -304,10 +302,9 @@
  	public List<int> DrawCacheFirstFractals = new List<int>(1000);
  
 -	public static ParticleRenderer ParticleSystem_World_OverPlayers = new ParticleRenderer();
--
--	public static ParticleRenderer ParticleSystem_World_BehindPlayers = new ParticleRenderer();
 +	public static ParticleRenderer ParticleSystem_World_OverPlayers;
-+
+ 
+-	public static ParticleRenderer ParticleSystem_World_BehindPlayers = new ParticleRenderer();
 +	public static ParticleRenderer ParticleSystem_World_BehindPlayers;
  
  	private static WindowStateController _windowMover;
@@ -449,10 +446,9 @@
  	public static int menuSkip;
  
 -	private static bool _needsLanguageSelect = true;
--
--	private static Item tooltipPrefixComparisonItem = new Item();
 +	private static bool _needsLanguageSelect;
-+
+ 
+-	private static Item tooltipPrefixComparisonItem = new Item();
 +	private static Item tooltipPrefixComparisonItem;
  
  	private MouseTextCache _mouseTextCache;
@@ -517,10 +513,9 @@
  	public static bool HoveringOverAnNPC;
  
 -	public static string hoverItemName = "";
--
--	public static Microsoft.Xna.Framework.Color inventoryBack = new Microsoft.Xna.Framework.Color(220, 220, 220, 220);
 +	public static string hoverItemName;
-+
+ 
+-	public static Microsoft.Xna.Framework.Color inventoryBack = new Microsoft.Xna.Framework.Color(220, 220, 220, 220);
 +	public static Microsoft.Xna.Framework.Color inventoryBack;
  
  	public static bool mouseText;
@@ -636,19 +631,17 @@
  	public static float atmo;
  
 -	private static float bgScale = 1f;
--
--	private static int bgWidthScaled = (int)(1024f * bgScale);
 +	private static float bgScale;
-+
+ 
+-	private static int bgWidthScaled = (int)(1024f * bgScale);
 +	private static int bgWidthScaled;
  
  	public static Microsoft.Xna.Framework.Color ColorOfTheSkies;
  
 -	private static Microsoft.Xna.Framework.Color ColorOfSurfaceBackgroundsBase = Microsoft.Xna.Framework.Color.White;
--
--	private static Microsoft.Xna.Framework.Color ColorOfSurfaceBackgroundsModified = Microsoft.Xna.Framework.Color.White;
 +	private static Microsoft.Xna.Framework.Color ColorOfSurfaceBackgroundsBase;
-+
+ 
+-	private static Microsoft.Xna.Framework.Color ColorOfSurfaceBackgroundsModified = Microsoft.Xna.Framework.Color.White;
 +	private static Microsoft.Xna.Framework.Color ColorOfSurfaceBackgroundsModified;
  
  	private float screenOff;
@@ -658,10 +651,9 @@
  	private bool _isDrawingOrUpdating;
  
 -	public static List<INeedRenderTargetContent> ContentThatNeedsRenderTargets = new List<INeedRenderTargetContent>();
--
--	private static bool _cameraPanHasBlackTransition = false;
 +	public static List<INeedRenderTargetContent> ContentThatNeedsRenderTargets;
-+
+ 
+-	private static bool _cameraPanHasBlackTransition = false;
 +	private static bool _cameraPanHasBlackTransition;
  
  	public CameraModifierStack CameraModifiers = new CameraModifierStack();
@@ -696,9 +688,9 @@
 +			if (!File.Exists(savePath + directorySeparatorChar + "servers.dat")) {
  				return;
  			}
--			using FileStream input = new FileStream(SavePath + Path.DirectorySeparatorChar + "servers.dat", FileMode.Open);
 +			string savePath2 = SavePath;
 +			directorySeparatorChar = Path.DirectorySeparatorChar;
+-			using FileStream input = new FileStream(SavePath + Path.DirectorySeparatorChar + "servers.dat", FileMode.Open);
 +			using FileStream input = new FileStream(savePath2 + directorySeparatorChar + "servers.dat", FileMode.Open);
  			using BinaryReader binaryReader = new BinaryReader(input);
  			binaryReader.ReadInt32();
@@ -714,9 +706,9 @@
  		} catch {
  		}
  		try {
--			using FileStream output = new FileStream(SavePath + Path.DirectorySeparatorChar + "servers.dat", FileMode.Create);
 +			string savePath2 = SavePath;
 +			char directorySeparatorChar = Path.DirectorySeparatorChar;
+-			using FileStream output = new FileStream(SavePath + Path.DirectorySeparatorChar + "servers.dat", FileMode.Create);
 +			using FileStream output = new FileStream(savePath2 + directorySeparatorChar + "servers.dat", FileMode.Create);
  			using BinaryWriter binaryWriter = new BinaryWriter(output);
  			binaryWriter.Write(279);
@@ -757,9 +749,9 @@
 +			if (!File.Exists(savePath + directorySeparatorChar + "config.dat")) {
  				return;
  			}
--			using FileStream input = new FileStream(SavePath + Path.DirectorySeparatorChar + "config.dat", FileMode.Open);
 +			string savePath2 = SavePath;
 +			directorySeparatorChar = Path.DirectorySeparatorChar;
+-			using FileStream input = new FileStream(SavePath + Path.DirectorySeparatorChar + "config.dat", FileMode.Open);
 +			using FileStream input = new FileStream(savePath2 + directorySeparatorChar + "config.dat", FileMode.Open);
  			using BinaryReader binaryReader = new BinaryReader(input);
  			int num = binaryReader.ReadInt32();
@@ -777,24 +769,16 @@
  			text += ((!invalidFileNameChars.Contains(c)) ? ((c != ' ') ? c : '_') : '-');
  		}
  		string text2 = (cloudSave ? CloudPlayerPath : PlayerPath);
--		if (FileUtilities.GetFullPath(text2 + Path.DirectorySeparatorChar + text + ".plr", cloudSave).StartsWith("\\\\.\\", StringComparison.Ordinal)) {
--			text += "_";
--		}
--		if (FileUtilities.Exists(text2 + Path.DirectorySeparatorChar + text + ".plr", cloudSave)) {
--			int num = 2;
--			while (FileUtilities.Exists(text2 + Path.DirectorySeparatorChar.ToString() + text + num + ".plr", cloudSave)) {
--				num++;
--			}
--			text += num;
--		}
--		return text2 + Path.DirectorySeparatorChar + text + ".plr";
 +		char directorySeparatorChar = Path.DirectorySeparatorChar;
+-		if (FileUtilities.GetFullPath(text2 + Path.DirectorySeparatorChar + text + ".plr", cloudSave).StartsWith("\\\\.\\", StringComparison.Ordinal)) {
 +		if (FileUtilities.GetFullPath(text2 + directorySeparatorChar + text + ".plr", cloudSave).StartsWith("\\\\.\\", StringComparison.Ordinal)) {
-+			text += "_";
-+		}
+ 			text += "_";
+ 		}
 +		directorySeparatorChar = Path.DirectorySeparatorChar;
+-		if (FileUtilities.Exists(text2 + Path.DirectorySeparatorChar + text + ".plr", cloudSave)) {
 +		if (FileUtilities.Exists(text2 + directorySeparatorChar + text + ".plr", cloudSave)) {
-+			int num = 2;
+ 			int num = 2;
+-			while (FileUtilities.Exists(text2 + Path.DirectorySeparatorChar.ToString() + text + num + ".plr", cloudSave)) {
 +			while (true) {
 +				object[] obj = new object[5] { text2, null, null, null, null };
 +				directorySeparatorChar = Path.DirectorySeparatorChar;
@@ -805,11 +789,12 @@
 +				if (!FileUtilities.Exists(string.Concat(obj), cloudSave)) {
 +					break;
 +				}
-+				num++;
-+			}
-+			text += num;
-+		}
+ 				num++;
+ 			}
+ 			text += num;
+ 		}
 +		directorySeparatorChar = Path.DirectorySeparatorChar;
+-		return text2 + Path.DirectorySeparatorChar + text + ".plr";
 +		return text2 + directorySeparatorChar + text + ".plr";
  	}
  
@@ -818,24 +803,16 @@
  		text = text.Replace(".", "_");
  		text = text.Replace("*", "_");
  		string text2 = (cloudSave ? CloudWorldPath : WorldPath);
--		if (FileUtilities.GetFullPath(text2 + Path.DirectorySeparatorChar + text + ".wld", cloudSave).StartsWith("\\\\.\\", StringComparison.Ordinal)) {
--			text += "_";
--		}
--		if (FileUtilities.Exists(text2 + Path.DirectorySeparatorChar + text + ".wld", cloudSave)) {
--			int num = 2;
--			while (FileUtilities.Exists(text2 + Path.DirectorySeparatorChar.ToString() + text + num + ".wld", cloudSave)) {
--				num++;
--			}
--			text += num;
--		}
--		return text2 + Path.DirectorySeparatorChar + text + ".wld";
 +		char directorySeparatorChar = Path.DirectorySeparatorChar;
+-		if (FileUtilities.GetFullPath(text2 + Path.DirectorySeparatorChar + text + ".wld", cloudSave).StartsWith("\\\\.\\", StringComparison.Ordinal)) {
 +		if (FileUtilities.GetFullPath(text2 + directorySeparatorChar + text + ".wld", cloudSave).StartsWith("\\\\.\\", StringComparison.Ordinal)) {
-+			text += "_";
-+		}
+ 			text += "_";
+ 		}
 +		directorySeparatorChar = Path.DirectorySeparatorChar;
+-		if (FileUtilities.Exists(text2 + Path.DirectorySeparatorChar + text + ".wld", cloudSave)) {
 +		if (FileUtilities.Exists(text2 + directorySeparatorChar + text + ".wld", cloudSave)) {
-+			int num = 2;
+ 			int num = 2;
+-			while (FileUtilities.Exists(text2 + Path.DirectorySeparatorChar.ToString() + text + num + ".wld", cloudSave)) {
 +			while (true) {
 +				object[] obj = new object[5] { text2, null, null, null, null };
 +				directorySeparatorChar = Path.DirectorySeparatorChar;
@@ -846,11 +823,12 @@
 +				if (!FileUtilities.Exists(string.Concat(obj), cloudSave)) {
 +					break;
 +				}
-+				num++;
-+			}
-+			text += num;
-+		}
+ 				num++;
+ 			}
+ 			text += num;
+ 		}
 +		directorySeparatorChar = Path.DirectorySeparatorChar;
+-		return text2 + Path.DirectorySeparatorChar + text + ".wld";
 +		return text2 + directorySeparatorChar + text + ".wld";
  	}
  

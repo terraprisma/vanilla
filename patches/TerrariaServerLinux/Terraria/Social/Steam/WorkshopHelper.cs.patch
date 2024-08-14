@@ -35,13 +35,12 @@
  			{
  				if (_world.IsCloudSave) {
 -					FileUtilities.CopyToLocal(_world.Path, _entryData.ContentFolderPath + Path.DirectorySeparatorChar + "world.wld");
--				} else {
--					FileUtilities.Copy(_world.Path, _entryData.ContentFolderPath + Path.DirectorySeparatorChar + "world.wld", cloud: false);
 +					string path = _world.Path;
 +					string contentFolderPath = _entryData.ContentFolderPath;
 +					char directorySeparatorChar = Path.DirectorySeparatorChar;
 +					FileUtilities.CopyToLocal(path, contentFolderPath + directorySeparatorChar + "world.wld");
-+				} else {
+ 				} else {
+-					FileUtilities.Copy(_world.Path, _entryData.ContentFolderPath + Path.DirectorySeparatorChar + "world.wld", cloud: false);
 +					string path2 = _world.Path;
 +					string contentFolderPath2 = _entryData.ContentFolderPath;
 +					char directorySeparatorChar = Path.DirectorySeparatorChar;
