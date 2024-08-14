@@ -5,7 +5,7 @@
  	{
  		Assembly.GetExecutingAssembly();
 -		return Array.FindAll(typeof(Program).Assembly.GetManifestResourceNames(), (string element) => element.StartsWith("Terraria.Localization.Content." + culture.CultureInfo.Name) && element.EndsWith(".json"));
-+		return Array.FindAll(typeof(Program).Assembly.GetManifestResourceNames(), (string element) => element.StartsWith("Terraria.Localization.Content." + culture.CultureInfo.Name.Replace('-', '_')) && element.EndsWith(".json"));
++		return Array.FindAll(typeof(Program).Assembly.GetManifestResourceNames(), (string element) => (element.StartsWith("Terraria.Localization.Content." + culture.CultureInfo.Name) || element.StartsWith("Terraria.Localization.Content." + culture.CultureInfo.Name.Replace('-', '_'))) && element.EndsWith(".json"));
  	}
  
  	public void SetLanguage(GameCulture culture)
