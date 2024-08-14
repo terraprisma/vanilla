@@ -1,4 +1,5 @@
 SteelSeriesEngineWrapper\SteelSeriesEngineWrapper.csproj
+Terraria\Microsoft.Xna.Framework.RuntimeProfile
 SteelSeriesEngineWrapper\FullSerializer\fsAotCompilationManager.cs
 SteelSeriesEngineWrapper\FullSerializer\fsBaseConverter.cs
 SteelSeriesEngineWrapper\FullSerializer\fsConfig.cs
@@ -128,7 +129,6 @@ SteelSeriesEngineWrapper\SteelSeries\GameSense\TactilePatternType.cs
 SteelSeriesEngineWrapper\SteelSeries\GameSense\TactilePattern_Nonrecursive.cs
 Terraria\Libraries\MP3Sharp\MP3Sharp.dll
 Terraria\Libraries\NVorbis\NVorbis.dll
-Terraria\Microsoft\Xna\Framework.RuntimeProfile
 SteelSeriesEngineWrapper\SteelSeries\GameSense\DeviceZone\AbstarctGenericTactile_Zone.cs
 SteelSeriesEngineWrapper\SteelSeries\GameSense\DeviceZone\AbstractDevice_Zone.cs
 SteelSeriesEngineWrapper\SteelSeries\GameSense\DeviceZone\AbstractIlluminationDevice_CustomZone.cs

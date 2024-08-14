@@ -4,11 +4,11 @@
  
  	private bool SaveImage(int width, int height, ImageFormat imageFormat, string filename)
  	{
--		if (!Utils.TryCreatingDirectory(Main.SavePath + Path.DirectorySeparatorChar + "Captures" + Path.DirectorySeparatorChar)) {
 +		string savePath = Main.SavePath;
 +		char directorySeparatorChar = Path.DirectorySeparatorChar;
 +		string text = directorySeparatorChar.ToString();
 +		directorySeparatorChar = Path.DirectorySeparatorChar;
+-		if (!Utils.TryCreatingDirectory(Main.SavePath + Path.DirectorySeparatorChar + "Captures" + Path.DirectorySeparatorChar)) {
 +		if (!Utils.TryCreatingDirectory(savePath + text + "Captures" + directorySeparatorChar)) {
  			return false;
  		}

@@ -3,7 +3,7 @@
 @@ -6,7 +_,7 @@
      <Version>1.4.4.9</Version>
      <Company>Re-Logic</Company>
-     <Company>Copyright © 2022 Re-Logic</Company>
+     <Copyright>Copyright © 2022 Re-Logic</Copyright>
 -    <RootNamespace>Terraria</RootNamespace>
 +    <RootNamespace>TerrariaServer</RootNamespace>
    </PropertyGroup>
@@ -30,6 +30,6 @@
      <EmbeddedResource Include="IO/Data/*" />
      <EmbeddedResource Include="Libraries/**" />
      <EmbeddedResource Include="Localization/Content/**" />
--    <EmbeddedResource Include="Microsoft/**" />
+-    <EmbeddedResource Include="Microsoft.Xna.Framework.RuntimeProfile" />
    </ItemGroup>
  </Project>

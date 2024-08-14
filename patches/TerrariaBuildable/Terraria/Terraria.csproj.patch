@@ -8,7 +8,7 @@
 -    <Nullable>enable</Nullable>
 -    <Version>1.4.4.9</Version>
 -    <Company>Re-Logic</Company>
--    <Company>Copyright © 2022 Re-Logic</Company>
+-    <Copyright>Copyright © 2022 Re-Logic</Copyright>
 -    <RootNamespace>Terraria</RootNamespace>
 -  </PropertyGroup>
 -  <ItemGroup>
@@ -42,7 +42,7 @@
 -    <EmbeddedResource Include="IO/Data/*" />
 -    <EmbeddedResource Include="Libraries/**" />
 -    <EmbeddedResource Include="Localization/Content/**" />
--    <EmbeddedResource Include="Microsoft/**" />
+-    <EmbeddedResource Include="Microsoft.Xna.Framework.RuntimeProfile" />
 -  </ItemGroup>
 +
 +    <Import Project="../Configuration.targets"/>

@@ -8,7 +8,7 @@
 -    <Nullable>enable</Nullable>
 -    <Version>1.0.0.0</Version>
 -    <Company>Re-Logic</Company>
--    <Company>Copyright © Re-Logic 2017</Company>
+-    <Copyright>Copyright © Re-Logic 2017</Copyright>
 -    <RootNamespace>ReLogic</RootNamespace>
 -  </PropertyGroup>
 -  <ItemGroup>
@@ -24,7 +24,7 @@
 -    <Reference Include="System.Windows.Forms" />
 -  </ItemGroup>
 -  <ItemGroup>
--    <EmbeddedResource Include="Microsoft/**" />
+-    <EmbeddedResource Include="Microsoft.Xna.Framework.RuntimeProfile" />
 -  </ItemGroup>
 +
 +    <Import Project="../Configuration.targets"/>
