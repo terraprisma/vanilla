@@ -1,6 +1,6 @@
---- decompiled/TerrariaServerWindows/Terraria/Localization/LanguageManager.cs
-+++ decompiled/TerrariaServerMac/Terraria/Localization/LanguageManager.cs
-@@ -160,7 +_,8 @@
+--- sources/TerrariaServerWindows/Terraria/Localization/LanguageManager.cs
++++ sources/TerrariaServerMac/Terraria/Localization/LanguageManager.cs
+@@ -180,7 +_,8 @@
  	public void UseSources(List<IContentSource> sourcesFromLowestToHighest)
  	{
  		string name = ActiveCulture.Name;
@@ -8,5 +8,5 @@
 -		string assetNameStart = ("Localization" + Path.DirectorySeparatorChar + name).ToLower();
 +		string assetNameStart = ("Localization" + directorySeparatorChar + name).ToLower();
  		LoadLanguage(ActiveCulture, processCopyCommands: false);
- 		foreach (IContentSource item in sourcesFromLowestToHighest) {
- 			foreach (string item2 in item.GetAllAssetsStartingWith(assetNameStart)) {
+ 		foreach (IContentSource item in sourcesFromLowestToHighest)
+ 		{

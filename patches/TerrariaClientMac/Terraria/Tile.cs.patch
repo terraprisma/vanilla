@@ -1,5 +1,5 @@
---- decompiled/TerrariaClientWindows/Terraria/Tile.cs
-+++ decompiled/TerrariaClientMac/Terraria/Tile.cs
+--- sources/TerrariaClientWindows/Terraria/Tile.cs
++++ sources/TerrariaClientMac/Terraria/Tile.cs
 @@ -1,8 +_,10 @@
 +using System.Runtime.InteropServices;
  using Microsoft.Xna.Framework;

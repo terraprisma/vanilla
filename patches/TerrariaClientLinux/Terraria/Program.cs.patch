@@ -1,5 +1,5 @@
---- decompiled/TerrariaClientWindows/Terraria/Program.cs
-+++ decompiled/TerrariaClientLinux/Terraria/Program.cs
+--- sources/TerrariaClientWindows/Terraria/Program.cs
++++ sources/TerrariaClientLinux/Terraria/Program.cs
 @@ -18,9 +_,9 @@
  
  public static class Program

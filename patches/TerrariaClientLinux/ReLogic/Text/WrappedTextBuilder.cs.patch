@@ -1,6 +1,6 @@
---- decompiled/TerrariaClientWindows/ReLogic/Text/WrappedTextBuilder.cs
-+++ decompiled/TerrariaClientLinux/ReLogic/Text/WrappedTextBuilder.cs
-@@ -84,7 +_,7 @@
+--- sources/TerrariaClientWindows/ReLogic/Text/WrappedTextBuilder.cs
++++ sources/TerrariaClientLinux/ReLogic/Text/WrappedTextBuilder.cs
+@@ -92,7 +_,7 @@
  			_completedText.Append('\n');
  		}
  		_workingLineWidth = 0f;

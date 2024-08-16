@@ -1,5 +1,5 @@
---- decompiled/TerrariaClientWindows/Terraria/IO/ResourcePackContentValidator.cs
-+++ decompiled/TerrariaClientLinux/Terraria/IO/ResourcePackContentValidator.cs
+--- sources/TerrariaClientWindows/Terraria/IO/ResourcePackContentValidator.cs
++++ sources/TerrariaClientLinux/Terraria/IO/ResourcePackContentValidator.cs
 @@ -1,5 +_,6 @@
  using System.IO;
  using ReLogic.Content;
@@ -7,10 +7,10 @@
  using Terraria.GameContent;
  
  namespace Terraria.IO;
-@@ -9,7 +_,9 @@
- 	public void ValidateResourePack(ResourcePack pack)
+@@ -10,7 +_,9 @@
  	{
- 		if ((AssetReaderCollection)Main.instance.Services.GetService(typeof(AssetReaderCollection)) != null) {
+ 		if ((AssetReaderCollection)Main.instance.Services.GetService(typeof(AssetReaderCollection)) != null)
+ 		{
 -			pack.GetContentSource().GetAllAssetsStartingWith("Images" + Path.DirectorySeparatorChar);
 +			IContentSource contentSource = pack.GetContentSource();
 +			char directorySeparatorChar = Path.DirectorySeparatorChar;

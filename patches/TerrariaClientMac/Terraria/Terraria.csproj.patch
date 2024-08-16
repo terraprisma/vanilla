@@ -1,5 +1,5 @@
---- decompiled/TerrariaClientWindows/Terraria/Terraria.csproj
-+++ decompiled/TerrariaClientMac/Terraria/Terraria.csproj
+--- sources/TerrariaClientWindows/Terraria/Terraria.csproj
++++ sources/TerrariaClientMac/Terraria/Terraria.csproj
 @@ -10,11 +_,8 @@
    </PropertyGroup>
    <ItemGroup>

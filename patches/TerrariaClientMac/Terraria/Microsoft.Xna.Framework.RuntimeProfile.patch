@@ -1,5 +1,5 @@
---- decompiled/TerrariaClientWindows/Terraria/Microsoft.Xna.Framework.RuntimeProfile
-+++ decompiled/TerrariaClientMac/Terraria/Microsoft.Xna.Framework.RuntimeProfile
+--- sources/TerrariaClientWindows/Terraria/Microsoft.Xna.Framework.RuntimeProfile
++++ sources/TerrariaClientMac/Terraria/Microsoft.Xna.Framework.RuntimeProfile
 @@ -1,1 +_,1 @@
 -Windows.v4.0.Reach
 +Windows.v4.0.HiDef

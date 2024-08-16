@@ -1,5 +1,5 @@
---- decompiled/TerrariaClientWindows/ReLogic/ReLogic.csproj
-+++ decompiled/TerrariaClientLinux/ReLogic/ReLogic.csproj
+--- sources/TerrariaClientWindows/ReLogic/ReLogic.csproj
++++ sources/TerrariaClientLinux/ReLogic/ReLogic.csproj
 @@ -9,10 +_,8 @@
      <RootNamespace>ReLogic</RootNamespace>
    </PropertyGroup>

@@ -12,14 +12,16 @@ public interface IStaticPortMapping
 	void _VtblGap1_2();
 
 	[DispId(3)]
-	int InternalPort {
+	int InternalPort
+	{
 		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
 		[DispId(3)]
 		get;
 	}
 
 	[DispId(4)]
-	string Protocol {
+	string Protocol
+	{
 		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
 		[DispId(4)]
 		[return: MarshalAs(UnmanagedType.BStr)]
@@ -27,7 +29,8 @@ public interface IStaticPortMapping
 	}
 
 	[DispId(5)]
-	string InternalClient {
+	string InternalClient
+	{
 		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
 		[DispId(5)]
 		[return: MarshalAs(UnmanagedType.BStr)]

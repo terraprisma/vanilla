@@ -1,5 +1,5 @@
---- decompiled/TerrariaServerWindows/ReLogic/OS/Windows/PathService.cs
-+++ decompiled/TerrariaServerLinux/ReLogic/OS/Windows/PathService.cs
+--- sources/TerrariaServerWindows/ReLogic/OS/Windows/PathService.cs
++++ sources/TerrariaServerLinux/ReLogic/OS/Windows/PathService.cs
 @@ -9,7 +_,7 @@
  {
  	public override string GetStoragePath()

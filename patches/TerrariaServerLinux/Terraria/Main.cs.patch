@@ -1,6 +1,6 @@
---- decompiled/TerrariaServerWindows/Terraria/Main.cs
-+++ decompiled/TerrariaServerLinux/Terraria/Main.cs
-@@ -1947,17 +_,17 @@
+--- sources/TerrariaServerWindows/Terraria/Main.cs
++++ sources/TerrariaServerLinux/Terraria/Main.cs
+@@ -1954,17 +_,17 @@
  
  	public static string CloudPlayerPath = "players";
  
@@ -22,7 +22,7 @@
  
  	public static bool PendingBorderlessState;
  
-@@ -1975,7 +_,7 @@
+@@ -1982,7 +_,7 @@
  
  	public static bool invasionProgressNearInvasion;
  
@@ -31,7 +31,7 @@
  
  	public static int invasionProgressIcon;
  
-@@ -1989,97 +_,27 @@
+@@ -1996,98 +_,27 @@
  
  	public static float invasionProgressAlpha;
  
@@ -40,7 +40,8 @@
  
  	public int currentNPCShowingChatBubble = -1;
  
--	public static int[] npcFrameCount = new int[688] {
+-	public static int[] npcFrameCount = new int[688]
+-	{
 -		1, 2, 2, 3, 6, 2, 2, 1, 1, 1,
 -		1, 1, 1, 1, 1, 1, 2, 25, 23, 25,
 -		21, 15, 26, 2, 10, 1, 16, 16, 16, 3,
@@ -137,7 +138,7 @@
  
  	public static bool menuMultiplayer;
  
-@@ -2099,47 +_,47 @@
+@@ -2107,47 +_,47 @@
  
  	public static int lastItemUpdate;
  
@@ -206,7 +207,7 @@
  
  	public static int SmartCursorX;
  
-@@ -2159,45 +_,45 @@
+@@ -2167,45 +_,45 @@
  
  	public static bool SmartInteractPotionOfReturn;
  
@@ -272,7 +273,7 @@
  
  	public static float cursorAlpha;
  
-@@ -2205,17 +_,17 @@
+@@ -2213,17 +_,17 @@
  
  	public static bool signBubble;
  
@@ -294,7 +295,7 @@
  
  	private int splashCounter;
  
-@@ -2239,9 +_,9 @@
+@@ -2247,9 +_,9 @@
  
  	public List<int> DrawCacheFirstFractals = new List<int>(1000);
  
@@ -306,7 +307,7 @@
  
  	private static WindowStateController _windowMover;
  
-@@ -2253,19 +_,19 @@
+@@ -2261,19 +_,19 @@
  
  	public static PlayerResourceSetsManager ResourceSetsManager;
  
@@ -331,7 +332,7 @@
  
  	public static bool autoShutdown;
  
-@@ -2279,59 +_,59 @@
+@@ -2287,59 +_,59 @@
  
  	public static int moondialCooldown;
  
@@ -411,7 +412,7 @@
  
  	public static GameTipsDisplay gameTips;
  
-@@ -2341,7 +_,7 @@
+@@ -2349,7 +_,7 @@
  
  	public ChumBucketProjectileHelper ChumBucketProjectileHelper = new ChumBucketProjectileHelper();
  
@@ -420,7 +421,7 @@
  
  	private float logoRotation;
  
-@@ -2355,7 +_,7 @@
+@@ -2363,7 +_,7 @@
  
  	private float logoScaleSpeed = 1f;
  
@@ -429,7 +430,7 @@
  
  	private float[] menuItemScale = new float[maxMenuItems];
  
-@@ -2365,7 +_,7 @@
+@@ -2373,7 +_,7 @@
  
  	private int selectedMenu2 = -1;
  
@@ -438,7 +439,7 @@
  
  	public static int selectedWorld;
  
-@@ -2373,9 +_,9 @@
+@@ -2381,9 +_,9 @@
  
  	public static int menuSkip;
  
@@ -450,7 +451,7 @@
  
  	private MouseTextCache _mouseTextCache;
  
-@@ -2383,13 +_,13 @@
+@@ -2391,13 +_,13 @@
  
  	public int textBlinkerState;
  
@@ -471,7 +472,7 @@
  
  	public TilePaintSystemV2 TilePaintSystem;
  
-@@ -2409,11 +_,11 @@
+@@ -2417,11 +_,11 @@
  
  	private List<DrawData> _voidLensDataSillouette2 = new List<DrawData>();
  
@@ -485,7 +486,7 @@
  
  	private TextDisplayCache _textDisplayCache = new TextDisplayCache();
  
-@@ -2423,25 +_,25 @@
+@@ -2431,25 +_,25 @@
  
  	private bool _imeToggle;
  
@@ -517,7 +518,7 @@
  
  	public static bool mouseText;
  
-@@ -2457,7 +_,7 @@
+@@ -2465,7 +_,7 @@
  
  	public static int selClothes;
  
@@ -526,7 +527,7 @@
  
  	private static int oldClothesStyle;
  
-@@ -2485,29 +_,29 @@
+@@ -2493,29 +_,29 @@
  
  	private static int _itemIconCacheTime;
  
@@ -564,7 +565,7 @@
  
  	private int grabColorSlider;
  
-@@ -2517,11 +_,11 @@
+@@ -2525,11 +_,11 @@
  
  	private bool[] menuWide = new bool[100];
  
@@ -578,7 +579,7 @@
  
  	public RejectionMenuInfo RejectionMenuInfo;
  
-@@ -2531,47 +_,47 @@
+@@ -2539,47 +_,47 @@
  
  	private float hellBlackBoxBottom;
  
@@ -643,7 +644,7 @@
  
  	private float screenOff;
  
-@@ -2581,25 +_,25 @@
+@@ -2589,25 +_,25 @@
  
  	private bool _isDrawingOrUpdating;
  
@@ -675,14 +676,15 @@
  
  	public static bool CanUpdateGameplay { get; private set; }
  
-@@ -3610,10 +_,14 @@
- 	protected void OpenRecent()
+@@ -3758,11 +_,15 @@
  	{
- 		try {
+ 		try
+ 		{
 +			string savePath = SavePath;
 +			char directorySeparatorChar = Path.DirectorySeparatorChar;
--			if (!File.Exists(SavePath + Path.DirectorySeparatorChar + "servers.dat")) {
-+			if (!File.Exists(savePath + directorySeparatorChar + "servers.dat")) {
+-			if (!File.Exists(SavePath + Path.DirectorySeparatorChar + "servers.dat"))
++			if (!File.Exists(savePath + directorySeparatorChar + "servers.dat"))
+ 			{
  				return;
  			}
 +			string savePath2 = SavePath;
@@ -691,35 +693,40 @@
 +			using FileStream input = new FileStream(savePath2 + directorySeparatorChar + "servers.dat", FileMode.Open);
  			using BinaryReader binaryReader = new BinaryReader(input);
  			binaryReader.ReadInt32();
- 			for (int i = 0; i < 10; i++) {
-@@ -3629,11 +_,15 @@
- 	{
+ 			for (int i = 0; i < 10; i++)
+@@ -3782,14 +_,18 @@
  		Utils.TryCreatingDirectory(SavePath);
- 		try {
+ 		try
+ 		{
 +			string savePath = SavePath;
 +			char directorySeparatorChar = Path.DirectorySeparatorChar;
 -			File.SetAttributes(SavePath + Path.DirectorySeparatorChar + "servers.dat", FileAttributes.Normal);
 +			File.SetAttributes(savePath + directorySeparatorChar + "servers.dat", FileAttributes.Normal);
- 		} catch {
  		}
- 		try {
+ 		catch
+ 		{
+ 		}
+ 		try
+ 		{
 +			string savePath2 = SavePath;
 +			char directorySeparatorChar = Path.DirectorySeparatorChar;
 -			using FileStream output = new FileStream(SavePath + Path.DirectorySeparatorChar + "servers.dat", FileMode.Create);
 +			using FileStream output = new FileStream(savePath2 + directorySeparatorChar + "servers.dat", FileMode.Create);
  			using BinaryWriter binaryWriter = new BinaryWriter(output);
  			binaryWriter.Write(279);
- 			for (int i = 0; i < 10; i++) {
-@@ -3768,10 +_,14 @@
+ 			for (int i = 0; i < 10; i++)
+@@ -3938,12 +_,16 @@
  
  	protected void LoadSettings()
  	{
 +		string savePath = SavePath;
 +		char directorySeparatorChar = Path.DirectorySeparatorChar;
--		if (File.Exists(SavePath + Path.DirectorySeparatorChar + "config.dat")) {
-+		if (File.Exists(savePath + directorySeparatorChar + "config.dat")) {
+-		if (File.Exists(SavePath + Path.DirectorySeparatorChar + "config.dat"))
++		if (File.Exists(savePath + directorySeparatorChar + "config.dat"))
+ 		{
  			OpenLegacySettings();
- 			if (SaveSettings()) {
+ 			if (SaveSettings())
+ 			{
 +				string savePath2 = SavePath;
 +				directorySeparatorChar = Path.DirectorySeparatorChar;
 -				File.Delete(SavePath + Path.DirectorySeparatorChar + "config.dat");
@@ -727,23 +734,24 @@
  			}
  			return;
  		}
-@@ -3793,7 +_,7 @@
- 		PendingBorderlessState = screenBorderless;
+@@ -3968,7 +_,7 @@
  		screenBorderlessPendingResizes = (screenBorderless ? 6 : 0);
- 		if (Platform.IsWindows && !dedServ) {
+ 		if (Platform.IsWindows && !dedServ)
+ 		{
 -			Form form = (Form)Control.FromHandle(instance.Window.Handle);
 +			Form form = Control.FromHandle(instance.Window.Handle);
- 			if (screenBorderless) {
+ 			if (screenBorderless)
+ 			{
  				SetBorderlessFormStyle(form);
- 			} else if (screenMaximized) {
-@@ -4059,10 +_,14 @@
- 	protected void OpenLegacySettings()
+@@ -4285,11 +_,15 @@
  	{
- 		try {
+ 		try
+ 		{
 +			string savePath = SavePath;
 +			char directorySeparatorChar = Path.DirectorySeparatorChar;
--			if (!File.Exists(SavePath + Path.DirectorySeparatorChar + "config.dat")) {
-+			if (!File.Exists(savePath + directorySeparatorChar + "config.dat")) {
+-			if (!File.Exists(SavePath + Path.DirectorySeparatorChar + "config.dat"))
++			if (!File.Exists(savePath + directorySeparatorChar + "config.dat"))
+ 			{
  				return;
  			}
 +			string savePath2 = SavePath;
@@ -752,38 +760,42 @@
 +			using FileStream input = new FileStream(savePath2 + directorySeparatorChar + "config.dat", FileMode.Open);
  			using BinaryReader binaryReader = new BinaryReader(input);
  			int num = binaryReader.ReadInt32();
- 			if (num >= 68) {
-@@ -4100,7 +_,7 @@
- 					terrariasFixedTiming = binaryReader.ReadBoolean();
+ 			if (num >= 68)
+@@ -4335,7 +_,7 @@
  				}
- 				if (num >= 91 && binaryReader.ReadBoolean() && !dedServ && Platform.IsWindows) {
+ 				if (num >= 91 && binaryReader.ReadBoolean() && !dedServ && Platform.IsWindows)
+ 				{
 -					((Form)Control.FromHandle(base.Window.Handle)).WindowState = FormWindowState.Maximized;
 +					Control.FromHandle(base.Window.Handle).WindowState = FormWindowState.Maximized;
  				}
- 				if (num >= 4) {
- 					int width = binaryReader.ReadInt32();
-@@ -4205,17 +_,29 @@
+ 				if (num >= 4)
+ 				{
+@@ -4470,20 +_,33 @@
  			text += ((!invalidFileNameChars.Contains(c)) ? ((c != ' ') ? c : '_') : '-');
  		}
  		string text2 = (cloudSave ? CloudPlayerPath : PlayerPath);
 +		char directorySeparatorChar = Path.DirectorySeparatorChar;
--		if (FileUtilities.GetFullPath(text2 + Path.DirectorySeparatorChar + text + ".plr", cloudSave).StartsWith("\\\\.\\", StringComparison.Ordinal)) {
-+		if (FileUtilities.GetFullPath(text2 + directorySeparatorChar + text + ".plr", cloudSave).StartsWith("\\\\.\\", StringComparison.Ordinal)) {
+-		if (FileUtilities.GetFullPath(text2 + Path.DirectorySeparatorChar + text + ".plr", cloudSave).StartsWith("\\\\.\\", StringComparison.Ordinal))
++		if (FileUtilities.GetFullPath(text2 + directorySeparatorChar + text + ".plr", cloudSave).StartsWith("\\\\.\\", StringComparison.Ordinal))
+ 		{
  			text += "_";
  		}
 +		directorySeparatorChar = Path.DirectorySeparatorChar;
--		if (FileUtilities.Exists(text2 + Path.DirectorySeparatorChar + text + ".plr", cloudSave)) {
-+		if (FileUtilities.Exists(text2 + directorySeparatorChar + text + ".plr", cloudSave)) {
+-		if (FileUtilities.Exists(text2 + Path.DirectorySeparatorChar + text + ".plr", cloudSave))
++		if (FileUtilities.Exists(text2 + directorySeparatorChar + text + ".plr", cloudSave))
+ 		{
  			int num = 2;
--			while (FileUtilities.Exists(text2 + Path.DirectorySeparatorChar.ToString() + text + num + ".plr", cloudSave)) {
-+			while (true) {
+-			while (FileUtilities.Exists(text2 + Path.DirectorySeparatorChar.ToString() + text + num + ".plr", cloudSave))
++			while (true)
+ 			{
 +				object[] obj = new object[5] { text2, null, null, null, null };
 +				directorySeparatorChar = Path.DirectorySeparatorChar;
 +				obj[1] = directorySeparatorChar.ToString();
 +				obj[2] = text;
 +				obj[3] = num;
 +				obj[4] = ".plr";
-+				if (!FileUtilities.Exists(string.Concat(obj), cloudSave)) {
++				if (!FileUtilities.Exists(string.Concat(obj), cloudSave))
++				{
 +					break;
 +				}
  				num++;
@@ -796,28 +808,32 @@
  	}
  
  	public static string GetWorldPathFromName(string worldName, bool cloudSave)
-@@ -4228,17 +_,29 @@
+@@ -4497,20 +_,33 @@
  		text = text.Replace(".", "_");
  		text = text.Replace("*", "_");
  		string text2 = (cloudSave ? CloudWorldPath : WorldPath);
 +		char directorySeparatorChar = Path.DirectorySeparatorChar;
--		if (FileUtilities.GetFullPath(text2 + Path.DirectorySeparatorChar + text + ".wld", cloudSave).StartsWith("\\\\.\\", StringComparison.Ordinal)) {
-+		if (FileUtilities.GetFullPath(text2 + directorySeparatorChar + text + ".wld", cloudSave).StartsWith("\\\\.\\", StringComparison.Ordinal)) {
+-		if (FileUtilities.GetFullPath(text2 + Path.DirectorySeparatorChar + text + ".wld", cloudSave).StartsWith("\\\\.\\", StringComparison.Ordinal))
++		if (FileUtilities.GetFullPath(text2 + directorySeparatorChar + text + ".wld", cloudSave).StartsWith("\\\\.\\", StringComparison.Ordinal))
+ 		{
  			text += "_";
  		}
 +		directorySeparatorChar = Path.DirectorySeparatorChar;
--		if (FileUtilities.Exists(text2 + Path.DirectorySeparatorChar + text + ".wld", cloudSave)) {
-+		if (FileUtilities.Exists(text2 + directorySeparatorChar + text + ".wld", cloudSave)) {
+-		if (FileUtilities.Exists(text2 + Path.DirectorySeparatorChar + text + ".wld", cloudSave))
++		if (FileUtilities.Exists(text2 + directorySeparatorChar + text + ".wld", cloudSave))
+ 		{
  			int num = 2;
--			while (FileUtilities.Exists(text2 + Path.DirectorySeparatorChar.ToString() + text + num + ".wld", cloudSave)) {
-+			while (true) {
+-			while (FileUtilities.Exists(text2 + Path.DirectorySeparatorChar.ToString() + text + num + ".wld", cloudSave))
++			while (true)
+ 			{
 +				object[] obj = new object[5] { text2, null, null, null, null };
 +				directorySeparatorChar = Path.DirectorySeparatorChar;
 +				obj[1] = directorySeparatorChar.ToString();
 +				obj[2] = text;
 +				obj[3] = num;
 +				obj[4] = ".wld";
-+				if (!FileUtilities.Exists(string.Concat(obj), cloudSave)) {
++				if (!FileUtilities.Exists(string.Concat(obj), cloudSave))
++				{
 +					break;
 +				}
  				num++;
@@ -830,25 +846,25 @@
  	}
  
  	public void setServerWorldRollbacks(string rollBacksToKeep)
-@@ -13582,7 +_,7 @@
- 			UpdateOldNPCShop();
+@@ -15963,7 +_,7 @@
  			hasFocus = base.IsActive;
- 			if (Platform.IsWindows) {
+ 			if (Platform.IsWindows)
+ 			{
 -				Form form = Control.FromHandle(base.Window.Handle) as Form;
 +				Form form = Control.FromHandle(base.Window.Handle);
  				bool num3 = form.WindowState == FormWindowState.Minimized;
  				bool flag = Form.ActiveForm == form;
  				hasFocus |= flag;
-@@ -52053,7 +_,7 @@
- 		bool flag = false;
+@@ -62971,7 +_,7 @@
  		Form form = null;
- 		if (Platform.IsWindows) {
+ 		if (Platform.IsWindows)
+ 		{
 -			form = (Form)Control.FromHandle(instance.Window.Handle);
 +			form = Control.FromHandle(instance.Window.Handle);
  			screenMaximized = form.WindowState == FormWindowState.Maximized;
- 			if (screenBorderless && screenMaximized && !graphics.IsFullScreen) {
- 				screenMaximized = false;
-@@ -52241,5 +_,217 @@
+ 			if (screenBorderless && screenMaximized && !graphics.IsFullScreen)
+ 			{
+@@ -63197,5 +_,218 @@
  	public static void WeGameRequireExitGame()
  	{
  		GameAskedToQuit = true;
@@ -866,7 +882,8 @@
 +		PendingResolutionHeight = 600;
 +		invasionProgressMode = 2;
 +		HasInteractibleObjectThatIsNotATile = false;
-+		npcFrameCount = new int[688] {
++		npcFrameCount = new int[688]
++		{
 +			1, 2, 2, 3, 6, 2, 2, 1, 1, 1,
 +			1, 1, 1, 1, 1, 1, 2, 25, 23, 25,
 +			21, 15, 26, 2, 10, 1, 16, 16, 16, 3,

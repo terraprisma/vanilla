@@ -1,5 +1,5 @@
---- decompiled/TerrariaClientWindows/Terraria/Program.cs
-+++ decompiled/TerrariaServerWindows/Terraria/Program.cs
+--- sources/TerrariaClientWindows/Terraria/Program.cs
++++ sources/TerrariaServerWindows/Terraria/Program.cs
 @@ -1,6 +_,5 @@
  using System;
  using System.Collections.Generic;
@@ -7,21 +7,22 @@
  using System.IO;
  using System.Reflection;
  using System.Runtime.CompilerServices;
-@@ -137,9 +_,6 @@
+@@ -157,10 +_,6 @@
  
  	private static void InitializeConsoleOutput()
  	{
--		if (Debugger.IsAttached) {
+-		if (Debugger.IsAttached)
+-		{
 -			return;
 -		}
- 		try {
+ 		try
+ 		{
  			Console.OutputEncoding = Encoding.UTF8;
- 			if (Platform.IsWindows) {
-@@ -171,6 +_,7 @@
+@@ -200,6 +_,7 @@
  
  	public static void RunGame()
  	{
 +		Main.dedServ = true;
  		LanguageManager.Instance.SetLanguage(GameCulture.DefaultCulture);
- 		if (Platform.IsOSX) {
- 			Main.OnEngineLoad += delegate {
+ 		if (Platform.IsOSX)
+ 		{

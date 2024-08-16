@@ -1,5 +1,5 @@
---- decompiled/TerrariaServerWindows/ReLogic/OS/Platform.cs
-+++ decompiled/TerrariaServerMac/ReLogic/OS/Platform.cs
+--- sources/TerrariaServerWindows/ReLogic/OS/Platform.cs
++++ sources/TerrariaServerMac/ReLogic/OS/Platform.cs
 @@ -1,12 +_,12 @@
  using System;
 -using ReLogic.OS.Windows;

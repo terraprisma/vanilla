@@ -1,6 +1,6 @@
---- decompiled/TerrariaClientWindows/ReLogic/Utilities/SlotId.cs
-+++ decompiled/TerrariaClientLinux/ReLogic/Utilities/SlotId.cs
-@@ -55,7 +_,8 @@
+--- sources/TerrariaClientWindows/ReLogic/Utilities/SlotId.cs
++++ sources/TerrariaClientLinux/ReLogic/Utilities/SlotId.cs
+@@ -59,7 +_,8 @@
  
  	public override int GetHashCode()
  	{

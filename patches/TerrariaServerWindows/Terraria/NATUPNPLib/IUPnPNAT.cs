@@ -10,7 +10,8 @@ namespace NATUPNPLib;
 public interface IUPnPNAT
 {
 	[DispId(1)]
-	IStaticPortMappingCollection StaticPortMappingCollection {
+	IStaticPortMappingCollection StaticPortMappingCollection
+	{
 		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
 		[DispId(1)]
 		[return: MarshalAs(UnmanagedType.Interface)]
