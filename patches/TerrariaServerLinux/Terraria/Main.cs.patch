@@ -124,18 +124,15 @@
  	public static bool mouseReforge;
  
 -	public static float reforgeScale = 0.8f;
--
--	public static Player clientPlayer = new Player();
--
--	public static string getIP = defaultIP;
--
--	public static string getPort = Convert.ToString(Netplay.ListenPort);
 +	public static float reforgeScale;
-+
+ 
+-	public static Player clientPlayer = new Player();
 +	public static Player clientPlayer;
-+
+ 
+-	public static string getIP = defaultIP;
 +	public static string getIP;
-+
+ 
+-	public static string getPort = Convert.ToString(Netplay.ListenPort);
 +	public static string getPort;
  
  	public static bool menuMultiplayer;

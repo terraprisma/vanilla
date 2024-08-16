@@ -4,9 +4,9 @@
  		_publisherInstances = new List<WorkshopHelper.UGCBased.APublisherInstance>();
  		base.ProgressReporter = new WorkshopProgressReporter(_publisherInstances);
  		base.SupportedTags = new SupportedWorkshopTags();
+-		_contentBaseFolder = Main.SavePath + Path.DirectorySeparatorChar + "Workshop";
 +		string savePath = Main.SavePath;
 +		char directorySeparatorChar = Path.DirectorySeparatorChar;
--		_contentBaseFolder = Main.SavePath + Path.DirectorySeparatorChar + "Workshop";
 +		_contentBaseFolder = savePath + directorySeparatorChar + "Workshop";
  		_downloader = WorkshopHelper.UGCBased.Downloader.Create();
  		_publishedItems = WorkshopHelper.UGCBased.PublishedItemsFinder.Create();

@@ -4,8 +4,8 @@
  		if (!isCloudSave) {
  			Utils.TryCreatingDirectory(text);
  		}
-+		string text2 = text;
 -		text += Path.DirectorySeparatorChar;
++		string text2 = text;
 +		char directorySeparatorChar = Path.DirectorySeparatorChar;
 +		text = text2 + directorySeparatorChar;
  		text = ((!Main.ActiveWorldFileData.UseGuidAsMapName) ? (text + Main.worldID + ".map") : string.Concat(text, Main.ActiveWorldFileData.UniqueId, ".map"));
