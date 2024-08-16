@@ -8,7 +8,10 @@
       "data": {
         "pathToExecutable": "Terraria.exe",
         "appId": 105600,
-        "depotId": 105601
+        "depotId": 105601,
+        "transformers": [ "decompiler-parity" ],
+        "decompiledLibraries": [ "ReLogic", "RailSDK.Net", "SteelSeriesEngineWrapper" ],
+        "resourceNamespaces": [ "Microsoft.Xna.Framework.RuntimeProfile", "Libraries" ]
       },
       "children": [
         {
@@ -18,7 +21,10 @@
           "data": {
             "pathToExecutable": "Terraria.exe",
             "appId": 105600,
-            "depotId": 105602
+            "depotId": 105602,
+            "transformers": [ "decompiler-parity" ],
+            "decompiledLibraries": [ "ReLogic", "RailSDK.Net", "SteelSeriesEngineWrapper" ],
+            "resourceNamespaces": [ "Microsoft.Xna.Framework.RuntimeProfile", "Libraries" ]
           }
         },
         {
@@ -28,7 +34,10 @@
           "data": {
             "pathToExecutable": "Terraria.app/Contents/Resources/Terraria.exe",
             "appId": 105600,
-            "depotId": 105603
+            "depotId": 105603,
+            "transformers": [ "decompiler-parity" ],
+            "decompiledLibraries": [ "ReLogic", "RailSDK.Net", "SteelSeriesEngineWrapper" ],
+            "resourceNamespaces": [ "Microsoft.Xna.Framework.RuntimeProfile", "Libraries" ]
           }
         },
         {
@@ -38,7 +47,10 @@
           "data": {
             "pathToExecutable": "TerrariaServer.exe",
             "appId": 105600,
-            "depotId": 105601
+            "depotId": 105601,
+            "transformers": [ "decompiler-parity" ],
+            "decompiledLibraries": [ "ReLogic", "RailSDK.Net", "SteelSeriesEngineWrapper" ],
+            "resourceNamespaces": [ "Microsoft.Xna.Framework.RuntimeProfile", "Libraries" ]
           },
           "children": [
             {
@@ -48,7 +60,10 @@
               "data": {
                 "pathToExecutable": "TerrariaServer.exe",
                 "appId": 105600,
-                "depotId": 105602
+                "depotId": 105602,
+                "transformers": [ "decompiler-parity" ],
+                "decompiledLibraries": [ "ReLogic", "RailSDK.Net", "SteelSeriesEngineWrapper" ],
+                "resourceNamespaces": [ "Microsoft.Xna.Framework.RuntimeProfile", "Libraries" ]
               }
             },
             {
@@ -58,7 +73,10 @@
               "data": {
                 "pathToExecutable": "Terraria.app/Contents/Resources/TerrariaServer.exe",
                 "appId": 105600,
-                "depotId": 105603
+                "depotId": 105603,
+                "transformers": [ "decompiler-parity" ],
+                "decompiledLibraries": [ "ReLogic", "RailSDK.Net", "SteelSeriesEngineWrapper" ],
+                "resourceNamespaces": [ "Microsoft.Xna.Framework.RuntimeProfile", "Libraries" ]
               }
             }
           ]
