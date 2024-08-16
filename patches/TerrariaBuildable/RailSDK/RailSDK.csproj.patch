@@ -1,5 +1,5 @@
---- decompiled/TerrariaClientWindows/RailSDK/RailSDK.csproj
-+++ decompiled/TerrariaBuildable/RailSDK/RailSDK.csproj
+--- sources/TerrariaClientWindows/RailSDK/RailSDK.csproj
++++ sources/TerrariaBuildable/RailSDK/RailSDK.csproj
 @@ -1,13 +_,13 @@
  <Project Sdk="Microsoft.NET.Sdk">
 -  <Import Project="../Configuration.targets" />

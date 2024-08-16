@@ -1,5 +1,5 @@
---- decompiled/TerrariaClientWindows/SteelSeriesEngineWrapper/SteelSeriesEngineWrapper.csproj
-+++ decompiled/TerrariaBuildable/SteelSeriesEngineWrapper/SteelSeriesEngineWrapper.csproj
+--- sources/TerrariaClientWindows/SteelSeriesEngineWrapper/SteelSeriesEngineWrapper.csproj
++++ sources/TerrariaBuildable/SteelSeriesEngineWrapper/SteelSeriesEngineWrapper.csproj
 @@ -1,16 +_,13 @@
  <Project Sdk="Microsoft.NET.Sdk">
 -  <Import Project="../Configuration.targets" />

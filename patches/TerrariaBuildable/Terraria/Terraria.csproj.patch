@@ -1,5 +1,5 @@
---- decompiled/TerrariaClientWindows/Terraria/Terraria.csproj
-+++ decompiled/TerrariaBuildable/Terraria/Terraria.csproj
+--- sources/TerrariaClientWindows/Terraria/Terraria.csproj
++++ sources/TerrariaBuildable/Terraria/Terraria.csproj
 @@ -1,44 +_,44 @@
  <Project Sdk="Microsoft.NET.Sdk">
 -  <Import Project="../Configuration.targets" />

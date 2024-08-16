@@ -1,5 +1,5 @@
---- decompiled/TerrariaClientWindows/ReLogic/ReLogic.csproj
-+++ decompiled/TerrariaBuildable/ReLogic/ReLogic.csproj
+--- sources/TerrariaClientWindows/ReLogic/ReLogic.csproj
++++ sources/TerrariaBuildable/ReLogic/ReLogic.csproj
 @@ -1,26 +_,28 @@
  <Project Sdk="Microsoft.NET.Sdk">
 -  <Import Project="../Configuration.targets" />
