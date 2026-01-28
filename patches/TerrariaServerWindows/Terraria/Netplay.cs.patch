@@ -1,6 +1,6 @@
 --- sources/TerrariaClientWindows/Terraria/Netplay.cs
 +++ sources/TerrariaServerWindows/Terraria/Netplay.cs
-@@ -4,6 +_,7 @@
+@@ -5,6 +_,7 @@
  using System.Net;
  using System.Net.Sockets;
  using System.Threading;
@@ -8,7 +8,7 @@
  using ReLogic.OS;
  using Terraria.Audio;
  using Terraria.Localization;
-@@ -60,6 +_,10 @@
+@@ -67,6 +_,10 @@
  
  	private static Thread _serverThread;
  
@@ -19,7 +19,7 @@
  	public static MessageBuffer fullBuffer = new MessageBuffer();
  
  	private static int _currentRequestId;
-@@ -149,10 +_,49 @@
+@@ -150,10 +_,49 @@
  
  	private static void OpenPort(int port)
  	{

@@ -1,6 +1,6 @@
 --- sources/TerrariaServerWindows/Terraria/Main.cs
 +++ sources/TerrariaServerLinux/Terraria/Main.cs
-@@ -1954,17 +_,17 @@
+@@ -1942,17 +_,17 @@
  
  	public static string CloudPlayerPath = "players";
  
@@ -22,7 +22,7 @@
  
  	public static bool PendingBorderlessState;
  
-@@ -1982,7 +_,7 @@
+@@ -1970,7 +_,7 @@
  
  	public static bool invasionProgressNearInvasion;
  
@@ -31,7 +31,7 @@
  
  	public static int invasionProgressIcon;
  
-@@ -1996,98 +_,27 @@
+@@ -1984,99 +_,27 @@
  
  	public static float invasionProgressAlpha;
  
@@ -40,12 +40,12 @@
  
  	public int currentNPCShowingChatBubble = -1;
  
--	public static int[] npcFrameCount = new int[688]
+-	public static int[] npcFrameCount = new int[697]
 -	{
 -		1, 2, 2, 3, 6, 2, 2, 1, 1, 1,
 -		1, 1, 1, 1, 1, 1, 2, 25, 23, 25,
 -		21, 15, 26, 2, 10, 1, 16, 16, 16, 3,
--		1, 15, 3, 1, 3, 1, 1, 21, 25, 1,
+-		1, 15, 6, 1, 3, 2, 2, 21, 25, 1,
 -		1, 1, 3, 3, 15, 3, 7, 7, 6, 5,
 -		6, 5, 3, 3, 23, 6, 3, 6, 6, 2,
 -		5, 6, 5, 7, 7, 4, 5, 8, 1, 5,
@@ -110,7 +110,8 @@
 -		7, 7, 7, 3, 4, 6, 27, 16, 2, 2,
 -		4, 3, 4, 23, 6, 1, 1, 2, 8, 8,
 -		14, 6, 6, 6, 6, 6, 2, 4, 14, 14,
--		14, 14, 14, 14, 14, 1, 1, 13
+-		14, 14, 14, 14, 14, 1, 1, 13, 6, 13,
+-		1, 3, 16, 3, 30, 3, 1
 -	};
 +	public static int[] npcFrameCount;
  
@@ -138,7 +139,7 @@
  
  	public static bool menuMultiplayer;
  
-@@ -2107,47 +_,47 @@
+@@ -2096,47 +_,47 @@
  
  	public static int lastItemUpdate;
  
@@ -207,7 +208,7 @@
  
  	public static int SmartCursorX;
  
-@@ -2167,45 +_,45 @@
+@@ -2156,45 +_,45 @@
  
  	public static bool SmartInteractPotionOfReturn;
  
@@ -273,7 +274,7 @@
  
  	public static float cursorAlpha;
  
-@@ -2213,17 +_,17 @@
+@@ -2202,25 +_,25 @@
  
  	public static bool signBubble;
  
@@ -290,12 +291,24 @@
 -	public static FrameSkipMode FrameSkipMode = FrameSkipMode.Subtle;
 +	public static FrameSkipMode FrameSkipMode;
  
--	public static bool terrariasFixedTiming = true;
-+	public static bool terrariasFixedTiming;
+-	public static bool improvedSubtleFrameSkip = true;
++	public static bool improvedSubtleFrameSkip;
+ 
+-	public static bool ThrottleWhenInactive = true;
++	public static bool ThrottleWhenInactive;
+ 
+-	public static bool UnpinFromCore0 = false;
++	public static bool UnpinFromCore0;
+ 
+-	public static bool NoPooling = false;
++	public static bool NoPooling;
+ 
+-	public static bool CollectGen0EveryFrame = false;
++	public static bool CollectGen0EveryFrame;
  
  	private int splashCounter;
  
-@@ -2247,9 +_,9 @@
+@@ -2244,13 +_,13 @@
  
  	public List<int> DrawCacheFirstFractals = new List<int>(1000);
  
@@ -305,9 +318,15 @@
 -	public static ParticleRenderer ParticleSystem_World_BehindPlayers = new ParticleRenderer();
 +	public static ParticleRenderer ParticleSystem_World_BehindPlayers;
  
+-	public static ParticleRenderer ParticleSystem_OverInventory = new ParticleRenderer();
++	public static ParticleRenderer ParticleSystem_OverInventory;
+ 
+-	public static ParticleRenderer ParticleSystem_OverCursor = new ParticleRenderer();
++	public static ParticleRenderer ParticleSystem_OverCursor;
+ 
  	private static WindowStateController _windowMover;
  
-@@ -2261,19 +_,19 @@
+@@ -2262,19 +_,19 @@
  
  	public static PlayerResourceSetsManager ResourceSetsManager;
  
@@ -332,7 +351,7 @@
  
  	public static bool autoShutdown;
  
-@@ -2287,59 +_,59 @@
+@@ -2288,19 +_,19 @@
  
  	public static int moondialCooldown;
  
@@ -356,7 +375,15 @@
  
  	private int lastMusicPlayed = -1;
  
- 	private bool playOldTile;
+@@ -2308,47 +_,47 @@
+ 
+ 	private bool boulderLogo;
+ 
+-	private static TitleMusicStyle titleMusicStyle = TitleMusicStyle.Current;
++	private static TitleMusicStyle titleMusicStyle;
+ 
+-	private static TitleMusicStyle titleMusicStyleRandom = TitleMusicStyle.Current;
++	private static TitleMusicStyle titleMusicStyleRandom;
  
 -	private static float _minWind = 0.34f;
 +	private static float _minWind;
@@ -410,18 +437,24 @@
 -	public static int ProjectileUpdateLoopIndex = -1;
 +	public static int ProjectileUpdateLoopIndex;
  
+-	public static readonly double TARGET_FRAME_TIME = 0.01666666753590107;
++	public static readonly double TARGET_FRAME_TIME;
+ 
  	public static GameTipsDisplay gameTips;
  
-@@ -2349,7 +_,7 @@
+@@ -2358,9 +_,9 @@
  
  	public ChumBucketProjectileHelper ChumBucketProjectileHelper = new ChumBucketProjectileHelper();
  
 -	public static int weatherVaneBobframe = 0;
 +	public static int weatherVaneBobframe;
  
+-	private static int seedMoonGoal = 16200;
++	private static int seedMoonGoal;
+ 
  	private float logoRotation;
  
-@@ -2363,7 +_,7 @@
+@@ -2374,7 +_,7 @@
  
  	private float logoScaleSpeed = 1f;
  
@@ -430,7 +463,7 @@
  
  	private float[] menuItemScale = new float[maxMenuItems];
  
-@@ -2373,7 +_,7 @@
+@@ -2384,7 +_,7 @@
  
  	private int selectedMenu2 = -1;
  
@@ -439,7 +472,7 @@
  
  	public static int selectedWorld;
  
-@@ -2381,9 +_,9 @@
+@@ -2392,33 +_,33 @@
  
  	public static int menuSkip;
  
@@ -451,7 +484,21 @@
  
  	private MouseTextCache _mouseTextCache;
  
-@@ -2391,13 +_,13 @@
+-	private static Item _mouseTextFakeItem = new Item();
++	private static Item _mouseTextFakeItem;
+ 
+-	private static Item _airHoverItem = new Item();
++	private static Item _airHoverItem;
+ 
+ 	private const int _mouseTextTooltip_MaxLines = 30;
+ 
+-	private static readonly string[] _mouseTextTooltipLine_Text = new string[30];
++	private static readonly string[] _mouseTextTooltipLine_Text;
+ 
+-	private static readonly Microsoft.Xna.Framework.Color[] _mouseTextTooltipLine_Color = new Microsoft.Xna.Framework.Color[30];
++	private static readonly Microsoft.Xna.Framework.Color[] _mouseTextTooltipLine_Color;
+ 
+ 	public int textBlinkerCount;
  
  	public int textBlinkerState;
  
@@ -472,7 +519,16 @@
  
  	public TilePaintSystemV2 TilePaintSystem;
  
-@@ -2417,11 +_,11 @@
+@@ -2428,7 +_,7 @@
+ 
+ 	public IHorizonRenderer HorizonRenderer = new NextHorizonRenderer();
+ 
+-	public static readonly HorizonHelper HorizonHelper = new HorizonHelper();
++	public static readonly HorizonHelper HorizonHelper;
+ 
+ 	private AmbientWindSystem _ambientWindSys = new AmbientWindSystem();
+ 
+@@ -2442,11 +_,11 @@
  
  	private List<DrawData> _voidLensDataSillouette2 = new List<DrawData>();
  
@@ -486,12 +542,21 @@
  
  	private TextDisplayCache _textDisplayCache = new TextDisplayCache();
  
-@@ -2431,25 +_,25 @@
+@@ -2458,31 +_,31 @@
  
  	private bool _imeToggle;
  
--	private static int _lastHoveredLoadoutIndex = -1;
-+	private static int _lastHoveredLoadoutIndex;
+-	private static int shopHappinessTextOffsetX = 26;
++	private static int shopHappinessTextOffsetX;
+ 
+-	private static int shopHappinessTextOffsetY = 98;
++	private static int shopHappinessTextOffsetY;
+ 
+-	private static int shopHappinessIconOffsetX = 12;
++	private static int shopHappinessIconOffsetX;
+ 
+-	private static int shopHappinessIconOffsetY = 108;
++	private static int shopHappinessIconOffsetY;
  
  	private List<int> _npcTypesThatAlreadyDrewAHead = new List<int>();
  
@@ -500,13 +565,13 @@
 -	private static List<string> _requiredObjecsForCraftingText = new List<string>();
 +	private static List<string> _requiredObjecsForCraftingText;
  
- 	private static bool _preventCraftingBecauseClickWasUsedToChangeFocusedRecipe;
+ 	public static bool _preventCraftingBecauseClickWasUsedToChangeFocusedRecipe;
  
 -	private static int _currentRecipeBeingCrafted = -1;
 +	private static int _currentRecipeBeingCrafted;
  
--	private static bool hidePVPIcons = false;
-+	private static bool hidePVPIcons;
+-	private static bool hidePVPAndTeamIcons = false;
++	private static bool hidePVPAndTeamIcons;
  
  	public static bool HoveringOverAnNPC;
  
@@ -518,7 +583,7 @@
  
  	public static bool mouseText;
  
-@@ -2465,7 +_,7 @@
+@@ -2498,7 +_,7 @@
  
  	public static int selClothes;
  
@@ -527,9 +592,22 @@
  
  	private static int oldClothesStyle;
  
-@@ -2493,29 +_,29 @@
+@@ -2532,41 +_,31 @@
  
  	private static int _itemIconCacheTime;
+ 
+-	private static readonly Microsoft.Xna.Framework.Point[] SmartCursorDirectionLocks = new Microsoft.Xna.Framework.Point[8]
+-	{
+-		new Microsoft.Xna.Framework.Point(0, -1),
+-		new Microsoft.Xna.Framework.Point(1, -1),
+-		new Microsoft.Xna.Framework.Point(1, 0),
+-		new Microsoft.Xna.Framework.Point(1, 1),
+-		new Microsoft.Xna.Framework.Point(0, 1),
+-		new Microsoft.Xna.Framework.Point(-1, 1),
+-		new Microsoft.Xna.Framework.Point(-1, 0),
+-		new Microsoft.Xna.Framework.Point(-1, -1)
+-	};
++	private static readonly Microsoft.Xna.Framework.Point[] SmartCursorDirectionLocks;
  
 -	private static bool _cannotDrawAccessoriesHorizontally = false;
 +	private static bool _cannotDrawAccessoriesHorizontally;
@@ -565,7 +643,7 @@
  
  	private int grabColorSlider;
  
-@@ -2525,11 +_,11 @@
+@@ -2576,11 +_,11 @@
  
  	private bool[] menuWide = new bool[100];
  
@@ -579,9 +657,9 @@
  
  	public RejectionMenuInfo RejectionMenuInfo;
  
-@@ -2539,47 +_,47 @@
+@@ -2598,25 +_,25 @@
  
- 	private float hellBlackBoxBottom;
+ 	private int[] _drawBackground_tempBack = new int[7];
  
 -	public static float InitialMapScale = 1f;
 +	public static float InitialMapScale;
@@ -613,17 +691,11 @@
  
  	private static int thunderDelay;
  
- 	public static int thunderDistance;
+@@ -2626,19 +_,19 @@
  
--	private static string[] MonolithFilterNames = new string[5] { "MonolithVortex", "MonolithNebula", "MonolithStardust", "MonolithSolar", "MonolithMoonLord" };
--
--	private static string[] MonolithSkyNames = new string[5] { "MonolithVortex", "MonolithNebula", "MonolithStardust", "MonolithSolar", "MonolithMoonLord" };
--
+ 	public static SpriteBatchBeginner LatestSurfaceBackgroundBeginner;
+ 
 -	private static float backgroundLayerTransitionSpeed = 0.05f;
-+	private static string[] MonolithFilterNames;
-+
-+	private static string[] MonolithSkyNames;
-+
 +	private static float backgroundLayerTransitionSpeed;
  
  	public static float atmo;
@@ -636,23 +708,25 @@
  
  	public static Microsoft.Xna.Framework.Color ColorOfTheSkies;
  
--	private static Microsoft.Xna.Framework.Color ColorOfSurfaceBackgroundsBase = Microsoft.Xna.Framework.Color.White;
-+	private static Microsoft.Xna.Framework.Color ColorOfSurfaceBackgroundsBase;
+-	public static Microsoft.Xna.Framework.Color ColorOfSurfaceBackgroundsBase = Microsoft.Xna.Framework.Color.White;
++	public static Microsoft.Xna.Framework.Color ColorOfSurfaceBackgroundsBase;
  
--	private static Microsoft.Xna.Framework.Color ColorOfSurfaceBackgroundsModified = Microsoft.Xna.Framework.Color.White;
-+	private static Microsoft.Xna.Framework.Color ColorOfSurfaceBackgroundsModified;
+-	public static Microsoft.Xna.Framework.Color ColorOfSurfaceBackgroundsModified = Microsoft.Xna.Framework.Color.White;
++	public static Microsoft.Xna.Framework.Color ColorOfSurfaceBackgroundsModified;
  
- 	private float screenOff;
+ 	private float scAdj;
  
-@@ -2589,25 +_,25 @@
+@@ -2650,17 +_,17 @@
  
- 	private bool _isDrawingOrUpdating;
+ 	private long presentTimestamp;
  
 -	public static List<INeedRenderTargetContent> ContentThatNeedsRenderTargets = new List<INeedRenderTargetContent>();
 +	public static List<INeedRenderTargetContent> ContentThatNeedsRenderTargets;
  
--	private static bool _cameraPanHasBlackTransition = false;
-+	private static bool _cameraPanHasBlackTransition;
+ 	private bool _resetContentThatNeedsRenderTargetsNextFrame;
+ 
+-	public static bool disableDontStarveDarknessDamage = false;
++	public static bool disableDontStarveDarknessDamage;
  
  	public CameraModifierStack CameraModifiers = new CameraModifierStack();
  
@@ -662,7 +736,9 @@
 -	public static int starsHit = 0;
 +	public static int starsHit;
  
- 	private static string _oldNetplayStatusText;
+ 	public static Vector2 LastCelestialBodyPosition;
+ 
+@@ -2668,11 +_,11 @@
  
  	private static TextSnippet[] _netplayStatusTextSnippets;
  
@@ -676,7 +752,7 @@
  
  	public static bool CanUpdateGameplay { get; private set; }
  
-@@ -3758,11 +_,15 @@
+@@ -4136,11 +_,15 @@
  	{
  		try
  		{
@@ -694,7 +770,7 @@
  			using BinaryReader binaryReader = new BinaryReader(input);
  			binaryReader.ReadInt32();
  			for (int i = 0; i < 10; i++)
-@@ -3782,14 +_,18 @@
+@@ -4160,14 +_,18 @@
  		Utils.TryCreatingDirectory(SavePath);
  		try
  		{
@@ -713,9 +789,9 @@
 -			using FileStream output = new FileStream(SavePath + Path.DirectorySeparatorChar + "servers.dat", FileMode.Create);
 +			using FileStream output = new FileStream(savePath2 + directorySeparatorChar + "servers.dat", FileMode.Create);
  			using BinaryWriter binaryWriter = new BinaryWriter(output);
- 			binaryWriter.Write(279);
+ 			binaryWriter.Write(315);
  			for (int i = 0; i < 10; i++)
-@@ -3938,12 +_,16 @@
+@@ -4323,12 +_,16 @@
  
  	protected void LoadSettings()
  	{
@@ -734,7 +810,7 @@
  			}
  			return;
  		}
-@@ -3968,7 +_,7 @@
+@@ -4353,7 +_,7 @@
  		screenBorderlessPendingResizes = (screenBorderless ? 6 : 0);
  		if (Platform.IsWindows && !dedServ)
  		{
@@ -743,7 +819,7 @@
  			if (screenBorderless)
  			{
  				SetBorderlessFormStyle(form);
-@@ -4285,11 +_,15 @@
+@@ -4678,11 +_,15 @@
  	{
  		try
  		{
@@ -761,7 +837,7 @@
  			using BinaryReader binaryReader = new BinaryReader(input);
  			int num = binaryReader.ReadInt32();
  			if (num >= 68)
-@@ -4335,7 +_,7 @@
+@@ -4728,7 +_,7 @@
  				}
  				if (num >= 91 && binaryReader.ReadBoolean() && !dedServ && Platform.IsWindows)
  				{
@@ -770,7 +846,7 @@
  				}
  				if (num >= 4)
  				{
-@@ -4470,20 +_,33 @@
+@@ -4863,20 +_,33 @@
  			text += ((!invalidFileNameChars.Contains(c)) ? ((c != ' ') ? c : '_') : '-');
  		}
  		string text2 = (cloudSave ? CloudPlayerPath : PlayerPath);
@@ -808,7 +884,7 @@
  	}
  
  	public static string GetWorldPathFromName(string worldName, bool cloudSave)
-@@ -4497,20 +_,33 @@
+@@ -4890,20 +_,33 @@
  		text = text.Replace(".", "_");
  		text = text.Replace("*", "_");
  		string text2 = (cloudSave ? CloudWorldPath : WorldPath);
@@ -846,8 +922,8 @@
  	}
  
  	public void setServerWorldRollbacks(string rollBacksToKeep)
-@@ -15963,7 +_,7 @@
- 			hasFocus = base.IsActive;
+@@ -17007,7 +_,7 @@
+ 			hasFocus = base.IsActive || DebugOptions.noPause;
  			if (Platform.IsWindows)
  			{
 -				Form form = Control.FromHandle(base.Window.Handle) as Form;
@@ -855,7 +931,7 @@
  				bool num3 = form.WindowState == FormWindowState.Minimized;
  				bool flag = Form.ActiveForm == form;
  				hasFocus |= flag;
-@@ -62971,7 +_,7 @@
+@@ -65541,7 +_,7 @@
  		Form form = null;
  		if (Platform.IsWindows)
  		{
@@ -864,7 +940,7 @@
  			screenMaximized = form.WindowState == FormWindowState.Maximized;
  			if (screenBorderless && screenMaximized && !graphics.IsFullScreen)
  			{
-@@ -63197,5 +_,218 @@
+@@ -65767,5 +_,246 @@
  	public static void WeGameRequireExitGame()
  	{
  		GameAskedToQuit = true;
@@ -882,12 +958,12 @@
 +		PendingResolutionHeight = 600;
 +		invasionProgressMode = 2;
 +		HasInteractibleObjectThatIsNotATile = false;
-+		npcFrameCount = new int[688]
++		npcFrameCount = new int[697]
 +		{
 +			1, 2, 2, 3, 6, 2, 2, 1, 1, 1,
 +			1, 1, 1, 1, 1, 1, 2, 25, 23, 25,
 +			21, 15, 26, 2, 10, 1, 16, 16, 16, 3,
-+			1, 15, 3, 1, 3, 1, 1, 21, 25, 1,
++			1, 15, 6, 1, 3, 2, 2, 21, 25, 1,
 +			1, 1, 3, 3, 15, 3, 7, 7, 6, 5,
 +			6, 5, 3, 3, 23, 6, 3, 6, 6, 2,
 +			5, 6, 5, 7, 7, 4, 5, 8, 1, 5,
@@ -952,7 +1028,8 @@
 +			7, 7, 7, 3, 4, 6, 27, 16, 2, 2,
 +			4, 3, 4, 23, 6, 1, 1, 2, 8, 8,
 +			14, 6, 6, 6, 6, 6, 2, 4, 14, 14,
-+			14, 14, 14, 14, 14, 1, 1, 13
++			14, 14, 14, 14, 14, 1, 1, 13, 6, 13,
++			1, 3, 16, 3, 30, 3, 1
 +		};
 +		npcLifeBytes = new Dictionary<int, byte>();
 +		exitScale = 0.8f;
@@ -1004,9 +1081,15 @@
 +		signX = 0;
 +		signY = 0;
 +		FrameSkipMode = FrameSkipMode.Subtle;
-+		terrariasFixedTiming = true;
++		improvedSubtleFrameSkip = true;
++		ThrottleWhenInactive = true;
++		UnpinFromCore0 = false;
++		NoPooling = false;
++		CollectGen0EveryFrame = false;
 +		ParticleSystem_World_OverPlayers = new ParticleRenderer();
 +		ParticleSystem_World_BehindPlayers = new ParticleRenderer();
++		ParticleSystem_OverInventory = new ParticleRenderer();
++		ParticleSystem_OverCursor = new ParticleRenderer();
 +		shouldSetDefaultUIScale = true;
 +		newDefaultUIScale = 0f;
 +		startFullscreen = false;
@@ -1016,6 +1099,8 @@
 +		PreventUpdatingTargets = true;
 +		_shouldUseWindyDayMusic = false;
 +		_shouldUseStormMusic = false;
++		titleMusicStyle = TitleMusicStyle.Current;
++		titleMusicStyleRandom = TitleMusicStyle.Current;
 +		_minWind = 0.34f;
 +		_maxWind = 0.4f;
 +		_minRain = 0.4f;
@@ -1032,24 +1117,45 @@
 +		_isLavafallMusicPlaying = false;
 +		chatMonitor = new RemadeChatMonitor();
 +		ProjectileUpdateLoopIndex = -1;
++		TARGET_FRAME_TIME = 0.01666666753590107;
 +		weatherVaneBobframe = 0;
++		seedMoonGoal = 16200;
 +		maxMenuItems = 16;
 +		selectedPlayer = 0;
 +		_needsLanguageSelect = true;
 +		tooltipPrefixComparisonItem = new Item();
++		_mouseTextFakeItem = new Item();
++		_airHoverItem = new Item();
++		_mouseTextTooltipLine_Text = new string[30];
++		_mouseTextTooltipLine_Color = new Microsoft.Xna.Framework.Color[30];
 +		newWorldName = "";
 +		shimmerShine = new Vector3(1f, 0.5f, 1f);
 +		specX = new int[1000];
 +		specY = new int[1000];
++		HorizonHelper = new HorizonHelper();
 +		_multiplyBlendState = null;
 +		_tempSeededRandom = new UnifiedRandom();
-+		_lastHoveredLoadoutIndex = -1;
++		shopHappinessTextOffsetX = 26;
++		shopHappinessTextOffsetY = 98;
++		shopHappinessIconOffsetX = 12;
++		shopHappinessIconOffsetY = 108;
 +		_requiredObjecsForCraftingText = new List<string>();
 +		_currentRecipeBeingCrafted = -1;
-+		hidePVPIcons = false;
++		hidePVPAndTeamIcons = false;
 +		hoverItemName = "";
 +		inventoryBack = new Microsoft.Xna.Framework.Color(220, 220, 220, 220);
 +		oldClothesColor = new Microsoft.Xna.Framework.Color[6];
++		SmartCursorDirectionLocks = new Microsoft.Xna.Framework.Point[8]
++		{
++			new Microsoft.Xna.Framework.Point(0, -1),
++			new Microsoft.Xna.Framework.Point(1, -1),
++			new Microsoft.Xna.Framework.Point(1, 0),
++			new Microsoft.Xna.Framework.Point(1, 1),
++			new Microsoft.Xna.Framework.Point(0, 1),
++			new Microsoft.Xna.Framework.Point(-1, 1),
++			new Microsoft.Xna.Framework.Point(-1, 0),
++			new Microsoft.Xna.Framework.Point(-1, -1)
++		};
 +		_cannotDrawAccessoriesHorizontally = false;
 +		selColor = Microsoft.Xna.Framework.Color.White;
 +		setKey = -1;
@@ -1068,15 +1174,13 @@
 +		_glowPaintColors = new VertexColors(Microsoft.Xna.Framework.Color.White);
 +		lightningDecay = 1f;
 +		lightningSpeed = 0f;
-+		MonolithFilterNames = new string[5] { "MonolithVortex", "MonolithNebula", "MonolithStardust", "MonolithSolar", "MonolithMoonLord" };
-+		MonolithSkyNames = new string[5] { "MonolithVortex", "MonolithNebula", "MonolithStardust", "MonolithSolar", "MonolithMoonLord" };
 +		backgroundLayerTransitionSpeed = 0.05f;
 +		bgScale = 1f;
 +		bgWidthScaled = (int)(1024f * bgScale);
 +		ColorOfSurfaceBackgroundsBase = Microsoft.Xna.Framework.Color.White;
 +		ColorOfSurfaceBackgroundsModified = Microsoft.Xna.Framework.Color.White;
 +		ContentThatNeedsRenderTargets = new List<INeedRenderTargetContent>();
-+		_cameraPanHasBlackTransition = false;
++		disableDontStarveDarknessDamage = false;
 +		starGame = false;
 +		starsHit = 0;
 +		ladyBugRainBoost = 0;

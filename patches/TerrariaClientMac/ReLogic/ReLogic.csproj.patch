@@ -12,12 +12,3 @@
      <Reference Include="Newtonsoft.Json" />
      <Reference Include="SteelSeriesEngineWrapper" />
      <Reference Include="System" />
-@@ -20,7 +_,5 @@
-     <Reference Include="System.Drawing" />
-     <Reference Include="System.Windows.Forms" />
-   </ItemGroup>
--  <ItemGroup>
--    <EmbeddedResource Include="Microsoft.Xna.Framework.RuntimeProfile" />
--  </ItemGroup>
-+  <ItemGroup />
- </Project>

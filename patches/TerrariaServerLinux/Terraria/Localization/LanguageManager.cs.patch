@@ -1,12 +1,21 @@
 --- sources/TerrariaServerWindows/Terraria/Localization/LanguageManager.cs
 +++ sources/TerrariaServerLinux/Terraria/Localization/LanguageManager.cs
-@@ -180,7 +_,8 @@
- 	public void UseSources(List<IContentSource> sourcesFromLowestToHighest)
+@@ -188,7 +_,8 @@
+ 	private void LoadFromContentSources()
  	{
  		string name = ActiveCulture.Name;
 +		char directorySeparatorChar = Path.DirectorySeparatorChar;
 -		string assetNameStart = ("Localization" + Path.DirectorySeparatorChar + name).ToLower();
 +		string assetNameStart = ("Localization" + directorySeparatorChar + name).ToLower();
- 		LoadLanguage(ActiveCulture, processCopyCommands: false);
- 		foreach (IContentSource item in sourcesFromLowestToHighest)
+ 		foreach (IContentSource contentSource in _contentSources)
  		{
+ 			foreach (string item in contentSource.GetAllAssetsStartingWith(assetNameStart))
+@@ -292,7 +_,7 @@
+ 
+ 	private bool UpdateTextValue(string key, string value)
+ 	{
+-		if (key.Contains('$'))
++		if (Enumerable.Contains(key, '$'))
+ 		{
+ 			string[] array = key.Split('$');
+ 			AddVariant(array[0], array[1], value);

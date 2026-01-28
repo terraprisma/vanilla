@@ -1,6 +1,6 @@
 --- sources/TerrariaClientWindows/ReLogic/Content/Sources/FileSystemContentSource.cs
 +++ sources/TerrariaClientMac/ReLogic/Content/Sources/FileSystemContentSource.cs
-@@ -21,7 +_,9 @@
+@@ -23,7 +_,9 @@
  		_basePath = Path.GetFullPath(basePath);
  		if (!_basePath.EndsWith("/") && !_basePath.EndsWith("\\"))
  		{
@@ -9,5 +9,5 @@
 +			char directorySeparatorChar = Path.DirectorySeparatorChar;
 +			_basePath = basePath2 + directorySeparatorChar;
  		}
- 		BuildNameToAbsolutePathDictionary();
+ 		Refresh();
  	}

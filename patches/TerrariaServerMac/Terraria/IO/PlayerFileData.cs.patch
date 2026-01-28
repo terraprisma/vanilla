@@ -1,15 +1,24 @@
 --- sources/TerrariaServerWindows/Terraria/IO/PlayerFileData.cs
 +++ sources/TerrariaServerMac/Terraria/IO/PlayerFileData.cs
-@@ -80,7 +_,11 @@
+@@ -82,14 +_,18 @@
  			return;
  		}
  		string fileName = GetFileName(includeExtension: false);
 -		string path = Main.PlayerPath + System.IO.Path.DirectorySeparatorChar + fileName + System.IO.Path.DirectorySeparatorChar;
+-		string text = playerPathFromName.Substring(0, playerPathFromName.Length - 4);
 +		string playerPath = Main.PlayerPath;
 +		char directorySeparatorChar = System.IO.Path.DirectorySeparatorChar;
 +		string text = directorySeparatorChar.ToString();
 +		directorySeparatorChar = System.IO.Path.DirectorySeparatorChar;
 +		string path = playerPath + text + fileName + directorySeparatorChar;
++		string text2 = playerPathFromName.Substring(0, playerPathFromName.Length - 4);
  		if (Directory.Exists(path))
  		{
  			string[] files = Directory.GetFiles(path);
+ 			for (int i = 0; i < files.Length; i++)
+ 			{
+-				string cloudPath = text + "/" + FileUtilities.GetFileName(files[i]);
++				string cloudPath = text2 + "/" + FileUtilities.GetFileName(files[i]);
+ 				FileUtilities.MoveToCloud(files[i], cloudPath);
+ 			}
+ 		}

@@ -1,13 +1,13 @@
 --- sources/TerrariaClientWindows/Terraria/Map/MapHelper.cs
 +++ sources/TerrariaClientLinux/Terraria/Map/MapHelper.cs
-@@ -2915,7 +_,9 @@
+@@ -3030,7 +_,9 @@
  		{
  			Utils.TryCreatingDirectory(text);
  		}
--		text += Path.DirectorySeparatorChar;
 +		string text2 = text;
 +		char directorySeparatorChar = Path.DirectorySeparatorChar;
-+		text = text2 + directorySeparatorChar;
- 		text = ((!Main.ActiveWorldFileData.UseGuidAsMapName) ? (text + Main.worldID + ".map") : string.Concat(text, Main.ActiveWorldFileData.UniqueId, ".map"));
+-		text = text + Path.DirectorySeparatorChar + Main.ActiveWorldFileData.MapFileName + ".map";
++		text = text2 + directorySeparatorChar + Main.ActiveWorldFileData.MapFileName + ".map";
  		new Stopwatch().Start();
  		if (!Main.gameMenu)
+ 		{

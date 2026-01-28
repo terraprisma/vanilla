@@ -1,0 +1,30 @@
+--- sources/TerrariaClientWindows/Terraria/Graphics/Renderers/LittleFlyingCritterParticle.cs
++++ sources/TerrariaClientLinux/Terraria/Graphics/Renderers/LittleFlyingCritterParticle.cs
+@@ -146,10 +_,10 @@
+ 		float num2 = Utils.Remap(_lifeTimeCounted, 0f, 90f, 0f, 1f) * Utils.Remap(_lifeTimeCounted, _lifeTimeTotal - 90, _lifeTimeTotal, 1f, 0f);
+ 		Color color = Lighting.GetColor(_localPosition.ToTileCoordinates());
+ 		_overrideColor = Color.White;
+-		Vector4 vector2 = _overrideColor.ToVector4() * color.ToVector4();
++		Vector4 color2 = _overrideColor.ToVector4() * color.ToVector4();
+-		Color color2 = new Color(vector2);
++		Color color3 = new Color(color2);
+ 		float scale = 0.75f;
+-		spritebatch.Draw(value, settings.AnchorPosition + _localPosition, rectangle, color2 * num2, 0f, origin, scale, (vector.X < 0f) ? SpriteEffects.FlipHorizontally : SpriteEffects.None, 0f);
++		spritebatch.Draw(value, settings.AnchorPosition + _localPosition, rectangle, color3 * num2, 0f, origin, scale, (vector.X < 0f) ? SpriteEffects.FlipHorizontally : SpriteEffects.None, 0f);
+ 	}
+ 
+ 	private void Draw_Fly(ref ParticleRendererSettings settings, SpriteBatch spritebatch)
+@@ -166,10 +_,10 @@
+ 			spritebatch.Draw(value, settings.AnchorPosition + _localPosition, value2, color * num, 0f, origin, 1f, (vector.X > 0f) ? SpriteEffects.FlipHorizontally : SpriteEffects.None, 0f);
+ 			return;
+ 		}
+-		Vector4 vector2 = _overrideColor.ToVector4() * color.ToVector4();
++		Vector4 color2 = _overrideColor.ToVector4() * color.ToVector4();
+-		Color color2 = new Color(vector2);
++		Color color3 = new Color(color2);
+ 		value2.Offset(0, 12);
+-		spritebatch.Draw(value, settings.AnchorPosition + _localPosition, value2, color2 * num, 0f, origin, 1f, (vector.X > 0f) ? SpriteEffects.FlipHorizontally : SpriteEffects.None, 0f);
++		spritebatch.Draw(value, settings.AnchorPosition + _localPosition, value2, color3 * num, 0f, origin, 1f, (vector.X > 0f) ? SpriteEffects.FlipHorizontally : SpriteEffects.None, 0f);
+ 		value2.Offset(0, 12);
+ 		spritebatch.Draw(value, settings.AnchorPosition + _localPosition, value2, color * num, 0f, origin, 1f, (vector.X > 0f) ? SpriteEffects.FlipHorizontally : SpriteEffects.None, 0f);
+ 	}

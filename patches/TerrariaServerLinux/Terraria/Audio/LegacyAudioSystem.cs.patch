@@ -1,6 +1,6 @@
 --- sources/TerrariaServerWindows/Terraria/Audio/LegacyAudioSystem.cs
 +++ sources/TerrariaServerLinux/Terraria/Audio/LegacyAudioSystem.cs
-@@ -32,7 +_,8 @@
+@@ -36,7 +_,8 @@
  		{
  			if (TrackNamesByIndex.TryGetValue(i, out var value))
  			{

@@ -1,0 +1,11 @@
+--- sources/TerrariaClientWindows/ReLogic/Content/FileChangeWatcher.cs
++++ sources/TerrariaClientMac/ReLogic/Content/FileChangeWatcher.cs
+@@ -67,7 +_,7 @@
+ 	{
+ 		FileSystemWatcher fileSystemWatcher = new FileSystemWatcher();
+ 		fileSystemWatcher.Path = path;
+-		fileSystemWatcher.NotifyFilter = NotifyFilters.FileName | NotifyFilters.DirectoryName | NotifyFilters.LastWrite;
++		fileSystemWatcher.NotifyFilter = NotifyFilters.DirectoryName | NotifyFilters.FileName | NotifyFilters.LastWrite;
+ 		fileSystemWatcher.IncludeSubdirectories = true;
+ 		fileSystemWatcher.Changed += delegate(object sender, FileSystemEventArgs e)
+ 		{

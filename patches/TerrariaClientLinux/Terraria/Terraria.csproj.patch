@@ -1,12 +1,13 @@
 --- sources/TerrariaClientWindows/Terraria/Terraria.csproj
 +++ sources/TerrariaClientLinux/Terraria/Terraria.csproj
-@@ -10,11 +_,8 @@
+@@ -10,12 +_,8 @@
    </PropertyGroup>
    <ItemGroup>
      <Reference Include="CsvHelper" />
 +    <Reference Include="FNA" />
      <Reference Include="Ionic.Zip.CF" />
 -    <Reference Include="Microsoft.Xna.Framework" />
+-    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline" />
 -    <Reference Include="Microsoft.Xna.Framework.Game" />
 -    <Reference Include="Microsoft.Xna.Framework.Graphics" />
 -    <Reference Include="Microsoft.Xna.Framework.Xact" />

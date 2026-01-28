@@ -1,6 +1,6 @@
 --- sources/TerrariaClientWindows/Terraria/Program.cs
 +++ sources/TerrariaClientLinux/Terraria/Program.cs
-@@ -18,9 +_,9 @@
+@@ -17,9 +_,9 @@
  
  public static class Program
  {

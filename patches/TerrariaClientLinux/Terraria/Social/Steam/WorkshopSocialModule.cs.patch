@@ -1,6 +1,6 @@
 --- sources/TerrariaClientWindows/Terraria/Social/Steam/WorkshopSocialModule.cs
 +++ sources/TerrariaClientLinux/Terraria/Social/Steam/WorkshopSocialModule.cs
-@@ -28,7 +_,9 @@
+@@ -29,7 +_,9 @@
  		_publisherInstances = new List<WorkshopHelper.UGCBased.APublisherInstance>();
  		base.ProgressReporter = new WorkshopProgressReporter(_publisherInstances);
  		base.SupportedTags = new SupportedWorkshopTags();
@@ -11,7 +11,7 @@
  		_downloader = WorkshopHelper.UGCBased.Downloader.Create();
  		_publishedItems = WorkshopHelper.UGCBased.PublishedItemsFinder.Create();
  		WorkshopIssueReporter workshopIssueReporter = new WorkshopIssueReporter();
-@@ -66,7 +_,11 @@
+@@ -67,7 +_,11 @@
  
  	public override List<string> GetListOfSubscribedWorldPaths()
  	{
@@ -24,7 +24,7 @@
  	}
  
  	public override List<string> GetListOfSubscribedResourcePackPaths()
-@@ -159,7 +_,12 @@
+@@ -160,7 +_,12 @@
  	private string GetTemporaryFolderPath()
  	{
  		ulong steamID = SteamUser.GetSteamID().m_SteamID;
@@ -38,7 +38,7 @@
  	}
  
  	private bool MakeTemporaryFolder(string temporaryFolderPath)
-@@ -197,7 +_,8 @@
+@@ -198,7 +_,8 @@
  		{
  			return false;
  		}
@@ -48,7 +48,7 @@
  		{
  			return true;
  		}
-@@ -212,7 +_,8 @@
+@@ -213,7 +_,8 @@
  		{
  			return false;
  		}

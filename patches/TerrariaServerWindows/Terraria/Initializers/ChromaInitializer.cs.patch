@@ -37,7 +37,7 @@
  	private const string GAME_NAME_ID = "TERRARIA";
 @@ -51,492 +_,6 @@
  
- 	private static VendorColorProfile _steelSeriesColorProfile;
+ 	private static VendorColorProfile _steelSeriesColorProfile = new VendorColorProfile();
  
 -	private static Dictionary<string, EventLocalization> _localizedEvents = new Dictionary<string, EventLocalization>
 -	{
@@ -528,7 +528,7 @@
  	public static void BindTo(Preferences preferences)
  	{
  		preferences.OnSave += Configuration_OnSave;
-@@ -573,165 +_,6 @@
+@@ -589,165 +_,6 @@
  		preferences.Put("SteelSeriesColorProfile", _steelSeriesColorProfile);
  	}
  
@@ -694,7 +694,7 @@
  	public static void DisableAllDeviceGroups()
  	{
  		if (_engine != null)
-@@ -740,132 +_,12 @@
+@@ -756,132 +_,12 @@
  		}
  	}
  

@@ -1,0 +1,17 @@
+--- sources/TerrariaClientWindows/Terraria/Utilities/MessageBoxIcon.cs
++++ sources/TerrariaClientLinux/Terraria/Utilities/MessageBoxIcon.cs
+@@ -1,9 +_,9 @@
+ namespace Terraria.Utilities;
+ 
+-public enum MessageBoxIcon
++public enum MessageBoxIcon : uint
+ {
+-	None = 0,
++	None = 0u,
+-	Error = 16,
++	Error = 0x10u,
+-	Warning = 48,
++	Warning = 0x20u,
+-	Information = 64
++	Information = 0x40u
+ }

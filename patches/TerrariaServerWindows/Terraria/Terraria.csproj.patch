@@ -1,15 +1,17 @@
 --- sources/TerrariaClientWindows/Terraria/Terraria.csproj
 +++ sources/TerrariaServerWindows/Terraria/Terraria.csproj
-@@ -6,7 +_,7 @@
-     <Version>1.4.4.9</Version>
+@@ -6,26 +_,21 @@
+     <Version>1.4.5.0</Version>
      <Company>Re-Logic</Company>
-     <Copyright>Copyright © 2022 Re-Logic</Copyright>
+     <Copyright>Copyright © 2023 Re-Logic</Copyright>
 -    <RootNamespace>Terraria</RootNamespace>
 +    <RootNamespace>TerrariaServer</RootNamespace>
    </PropertyGroup>
    <ItemGroup>
      <Reference Include="CsvHelper" />
-@@ -15,16 +_,12 @@
+     <Reference Include="Ionic.Zip.CF" />
+     <Reference Include="Microsoft.Xna.Framework" />
+-    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline" />
      <Reference Include="Microsoft.Xna.Framework.Game" />
      <Reference Include="Microsoft.Xna.Framework.Graphics" />
      <Reference Include="Microsoft.Xna.Framework.Xact" />
@@ -26,7 +28,7 @@
      <Reference Include="System" />
      <Reference Include="System.Core" />
      <Reference Include="System.Drawing" />
-@@ -39,6 +_,5 @@
+@@ -40,6 +_,5 @@
      <EmbeddedResource Include="IO/Data/*" />
      <EmbeddedResource Include="Libraries/**" />
      <EmbeddedResource Include="Localization/Content/**" />

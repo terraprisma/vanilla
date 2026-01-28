@@ -1,6 +1,6 @@
 --- sources/TerrariaServerWindows/Terraria/TimeLogger.cs
 +++ sources/TerrariaServerMac/Terraria/TimeLogger.cs
-@@ -153,7 +_,9 @@
+@@ -572,7 +_,9 @@
  		{
  			startLoggingNextFrame = false;
  			_ = DateTime.Now;

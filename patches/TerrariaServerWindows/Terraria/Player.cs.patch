@@ -1,0 +1,14 @@
+--- sources/TerrariaClientWindows/Terraria/Player.cs
++++ sources/TerrariaServerWindows/Terraria/Player.cs
+@@ -27819,11 +_,6 @@
+ 		{
+ 			ActiveSections.CheckSection(position);
+ 		}
+-		if (DebugOptions.ShowSections && whoAmI == Main.myPlayer)
+-		{
+-			Point point = new Point(Netplay.GetSectionX((int)position.X >> 4), Netplay.GetSectionY((int)position.Y >> 4));
+-			DebugLineDraw.World.AddRectangle(new Vector2(point.X * 200 * 16, point.Y * 150 * 16), new Vector2((point.X + 1) * 200 * 16, (point.Y + 1) * 150 * 16), Color.Yellow);
+-		}
+ 	}
+ 
+ 	private void Update_AdjustTileTargetForDisplayJars(int i)

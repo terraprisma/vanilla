@@ -1,6 +1,6 @@
 --- sources/TerrariaClientWindows/Terraria/Audio/LegacyAudioSystem.cs
 +++ sources/TerrariaServerWindows/Terraria/Audio/LegacyAudioSystem.cs
-@@ -76,44 +_,12 @@
+@@ -80,44 +_,12 @@
  
  	private IAudioTrack FindReplacementTrack(List<IContentSource> sources, string assetPath)
  	{

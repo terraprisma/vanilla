@@ -1,6 +1,6 @@
 --- sources/TerrariaClientWindows/Terraria/Audio/LegacySoundPlayer.cs
 +++ sources/TerrariaClientMac/Terraria/Audio/LegacySoundPlayer.cs
-@@ -253,7 +_,10 @@
+@@ -254,7 +_,10 @@
  		TrackableSoundInstances = new SoundEffectInstance[TrackableSounds.Length];
  		for (int num4 = 0; num4 < TrackableSounds.Length; num4++)
  		{

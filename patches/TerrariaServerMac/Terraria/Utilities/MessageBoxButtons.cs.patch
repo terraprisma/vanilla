@@ -1,0 +1,17 @@
+--- sources/TerrariaServerWindows/Terraria/Utilities/MessageBoxButtons.cs
++++ sources/TerrariaServerMac/Terraria/Utilities/MessageBoxButtons.cs
+@@ -2,9 +_,9 @@
+ 
+ public enum MessageBoxButtons
+ {
+-	OK = 0,
+-	OKCancel = 1,
+-	YesNoCancel = 3,
+-	YesNo = 4,
+-	RetryCancel = 5
++	OK,
++	OKCancel,
++	YesNoCancel,
++	YesNo,
++	RetryCancel
+ }

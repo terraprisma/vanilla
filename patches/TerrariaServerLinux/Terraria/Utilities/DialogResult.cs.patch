@@ -1,0 +1,19 @@
+--- sources/TerrariaServerWindows/Terraria/Utilities/DialogResult.cs
++++ sources/TerrariaServerLinux/Terraria/Utilities/DialogResult.cs
+@@ -2,10 +_,10 @@
+ 
+ public enum DialogResult
+ {
+-	None = 0,
+-	OK = 1,
+-	Cancel = 2,
+-	Retry = 4,
+-	Yes = 6,
+-	No = 7
++	None,
++	OK,
++	Cancel,
++	Retry,
++	Yes,
++	No
+ }

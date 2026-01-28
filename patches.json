@@ -49,8 +49,9 @@
             "appId": 105600,
             "depotId": 105601,
             "transformers": [ "decompiler-parity" ],
-            "decompiledLibraries": [ "ReLogic", "RailSDK.Net", "SteelSeriesEngineWrapper" ],
-            "resourceNamespaces": [ "Microsoft.Xna.Framework.RuntimeProfile", "Libraries" ]
+            "decompiledLibraries": [ "ReLogic", "RailSDK.Net" ],
+            "resourceNamespaces": [ "Microsoft.Xna.Framework.RuntimeProfile", "Libraries" ],
+            "polyfilledLibraries": [ "../lib/SteelSeriesEngineWrapper.dll" ]
           },
           "children": [
             {
@@ -62,8 +63,9 @@
                 "appId": 105600,
                 "depotId": 105602,
                 "transformers": [ "decompiler-parity" ],
-                "decompiledLibraries": [ "ReLogic", "RailSDK.Net", "SteelSeriesEngineWrapper" ],
-                "resourceNamespaces": [ "Microsoft.Xna.Framework.RuntimeProfile", "Libraries" ]
+                "decompiledLibraries": [ "ReLogic", "RailSDK.Net" ],
+                "resourceNamespaces": [ "Microsoft.Xna.Framework.RuntimeProfile", "Libraries" ],
+                "polyfilledLibraries": [ "../lib/SteelSeriesEngineWrapper.dll" ]
               }
             },
             {
@@ -75,8 +77,9 @@
                 "appId": 105600,
                 "depotId": 105603,
                 "transformers": [ "decompiler-parity" ],
-                "decompiledLibraries": [ "ReLogic", "RailSDK.Net", "SteelSeriesEngineWrapper" ],
-                "resourceNamespaces": [ "Microsoft.Xna.Framework.RuntimeProfile", "Libraries" ]
+                "decompiledLibraries": [ "ReLogic", "RailSDK.Net" ],
+                "resourceNamespaces": [ "Microsoft.Xna.Framework.RuntimeProfile", "Libraries" ],
+                "polyfilledLibraries": [ "../lib/SteelSeriesEngineWrapper.dll" ]
               }
             }
           ]

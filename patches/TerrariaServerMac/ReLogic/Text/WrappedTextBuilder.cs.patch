@@ -1,11 +1,11 @@
 --- sources/TerrariaServerWindows/ReLogic/Text/WrappedTextBuilder.cs
 +++ sources/TerrariaServerMac/ReLogic/Text/WrappedTextBuilder.cs
-@@ -92,7 +_,7 @@
+@@ -77,7 +_,7 @@
  			_completedText.Append('\n');
  		}
  		_workingLineWidth = 0f;
 -		_completedText.Append(_workingLine);
 +		_completedText.Append((object)_workingLine);
  		_workingLine.Clear();
+ 		_firstLine = false;
  	}
- 
