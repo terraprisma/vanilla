@@ -13,7 +13,7 @@
  		{
  			return false;
  		}
-@@ -314,7 +_,21 @@
+@@ -313,7 +_,21 @@
  
  	private void SaveImage(Texture2D texture, int width, int height, ImageFormat imageFormat, string foldername, string filename)
  	{
@@ -36,7 +36,7 @@
  		string text2 = Path.Combine(text, filename);
  		if (!Utils.TryCreatingDirectory(text))
  		{
-@@ -375,8 +_,31 @@
+@@ -373,8 +_,31 @@
  		if (_activeSettings.UseScaling && _outputData != null)
  		{
  			int num = 0;

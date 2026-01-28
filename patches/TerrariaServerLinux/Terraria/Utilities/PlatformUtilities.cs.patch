@@ -1,16 +1,16 @@
 --- sources/TerrariaServerWindows/Terraria/Utilities/PlatformUtilities.cs
 +++ sources/TerrariaServerLinux/Terraria/Utilities/PlatformUtilities.cs
-@@ -1,12 +_,20 @@
+@@ -1,11 +_,40 @@
  using System;
- using System.IO;
-+using Microsoft.Xna.Framework.Graphics;
++using System.IO;
++using SDL3;
  
  namespace Terraria.Utilities;
  
  public static class PlatformUtilities
  {
--	public static void SavePng(Stream stream, int width, int height, int imgWidth, int imgHeight, byte[] data)
-+	public unsafe static void SavePng(Stream stream, int width, int height, int imgWidth, int imgHeight, byte[] data)
+-	public static void SavePng(string path, int width, int height, byte[] data)
++	public unsafe static void SavePng(string path, int width, int height, byte[] data)
  	{
 -		throw new NotSupportedException("Use Bitmap to save png images on windows");
 +		if (width * height * 4 > data.Length)
@@ -19,7 +19,27 @@
 +		}
 +		fixed (byte* ptr = data)
 +		{
-+			FNA3D.WritePNGStream(stream, width, height, imgWidth, imgHeight, (IntPtr)ptr);
++			IntPtr intPtr = SDL.SDL_CreateSurfaceFrom(width, height, SDL.SDL_PixelFormat.SDL_PIXELFORMAT_ABGR8888, (IntPtr)ptr, width * 4);
++			if (intPtr == IntPtr.Zero)
++			{
++				throw new IOException("Failed to create SDL surface: " + SDL.SDL_GetError());
++			}
++			try
++			{
++				IntPtr intPtr2 = SDL.SDL_IOFromFile(path, "wb");
++				if (intPtr2 == IntPtr.Zero)
++				{
++					throw new IOException("Failed to open file for writing: " + SDL.SDL_GetError());
++				}
++				if (!SDL.SDL_SavePNG_IO(intPtr, intPtr2, true))
++				{
++					throw new IOException("Failed to save PNG: " + SDL.SDL_GetError());
++				}
++			}
++			finally
++			{
++				SDL.SDL_DestroySurface(intPtr);
++			}
 +		}
  	}
  }

@@ -1,5 +1,16 @@
 --- sources/TerrariaClientWindows/Terraria/Program.cs
 +++ sources/TerrariaClientMac/Terraria/Program.cs
+@@ -6,8 +_,10 @@
+ using System.Runtime.CompilerServices;
+ using System.Text;
+ using System.Threading;
++using Microsoft.Xna.Framework.Graphics;
+ using ReLogic.IO;
+ using ReLogic.OS;
++using SDL3;
+ using Terraria.Initializers;
+ using Terraria.Localization;
+ using Terraria.Social;
 @@ -17,9 +_,9 @@
  
  public static class Program
@@ -12,3 +23,15 @@
  
  	public static bool IsMono = Type.GetType("Mono.Runtime") != null;
  
+@@ -242,6 +_,11 @@
+ 
+ 	private static void TrySettingDefaultFNADriver(string[] args)
+ 	{
++		Console.WriteLine(("SDL v" + SDL.SDL_GetVersion() + "." + SDL.SDL_GetRevision()) ?? "");
++		uint num = FNA3D.FNA3D_LinkedVersion();
++		Console.WriteLine(("FNA3D v" + num / 10000 + "." + num / 100 % 100 + "." + num % 100) ?? "");
++		uint num2 = FAudio.FAudioLinkedVersion();
++		Console.WriteLine(("FAudio v" + num2 / 10000 + "." + num2 / 100 % 100 + "." + num2 % 100) ?? "");
+ 		bool flag = false;
+ 		for (int i = 0; i < args.Length; i++)
+ 		{

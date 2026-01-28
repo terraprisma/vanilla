@@ -752,7 +752,7 @@
  
  	public static bool CanUpdateGameplay { get; private set; }
  
-@@ -4136,11 +_,15 @@
+@@ -4148,11 +_,15 @@
  	{
  		try
  		{
@@ -770,7 +770,7 @@
  			using BinaryReader binaryReader = new BinaryReader(input);
  			binaryReader.ReadInt32();
  			for (int i = 0; i < 10; i++)
-@@ -4160,14 +_,18 @@
+@@ -4172,14 +_,18 @@
  		Utils.TryCreatingDirectory(SavePath);
  		try
  		{
@@ -791,7 +791,7 @@
  			using BinaryWriter binaryWriter = new BinaryWriter(output);
  			binaryWriter.Write(315);
  			for (int i = 0; i < 10; i++)
-@@ -4323,12 +_,16 @@
+@@ -4335,12 +_,16 @@
  
  	protected void LoadSettings()
  	{
@@ -810,7 +810,7 @@
  			}
  			return;
  		}
-@@ -4353,7 +_,7 @@
+@@ -4365,7 +_,7 @@
  		screenBorderlessPendingResizes = (screenBorderless ? 6 : 0);
  		if (Platform.IsWindows && !dedServ)
  		{
@@ -819,7 +819,7 @@
  			if (screenBorderless)
  			{
  				SetBorderlessFormStyle(form);
-@@ -4678,11 +_,15 @@
+@@ -4690,11 +_,15 @@
  	{
  		try
  		{
@@ -837,7 +837,7 @@
  			using BinaryReader binaryReader = new BinaryReader(input);
  			int num = binaryReader.ReadInt32();
  			if (num >= 68)
-@@ -4728,7 +_,7 @@
+@@ -4740,7 +_,7 @@
  				}
  				if (num >= 91 && binaryReader.ReadBoolean() && !dedServ && Platform.IsWindows)
  				{
@@ -846,7 +846,7 @@
  				}
  				if (num >= 4)
  				{
-@@ -4863,20 +_,33 @@
+@@ -4875,20 +_,33 @@
  			text += ((!invalidFileNameChars.Contains(c)) ? ((c != ' ') ? c : '_') : '-');
  		}
  		string text2 = (cloudSave ? CloudPlayerPath : PlayerPath);
@@ -884,7 +884,7 @@
  	}
  
  	public static string GetWorldPathFromName(string worldName, bool cloudSave)
-@@ -4890,20 +_,33 @@
+@@ -4902,20 +_,33 @@
  		text = text.Replace(".", "_");
  		text = text.Replace("*", "_");
  		string text2 = (cloudSave ? CloudWorldPath : WorldPath);
@@ -922,7 +922,7 @@
  	}
  
  	public void setServerWorldRollbacks(string rollBacksToKeep)
-@@ -17007,7 +_,7 @@
+@@ -17020,7 +_,7 @@
  			hasFocus = base.IsActive || DebugOptions.noPause;
  			if (Platform.IsWindows)
  			{
@@ -931,7 +931,7 @@
  				bool num3 = form.WindowState == FormWindowState.Minimized;
  				bool flag = Form.ActiveForm == form;
  				hasFocus |= flag;
-@@ -65541,7 +_,7 @@
+@@ -65554,7 +_,7 @@
  		Form form = null;
  		if (Platform.IsWindows)
  		{
@@ -940,7 +940,7 @@
  			screenMaximized = form.WindowState == FormWindowState.Maximized;
  			if (screenBorderless && screenMaximized && !graphics.IsFullScreen)
  			{
-@@ -65767,5 +_,246 @@
+@@ -65780,5 +_,246 @@
  	public static void WeGameRequireExitGame()
  	{
  		GameAskedToQuit = true;
