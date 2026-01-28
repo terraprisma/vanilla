@@ -1,0 +1,11 @@
+--- sources/TerrariaClientWindows/Terraria/GameContent/Drawing/TileDrawing.cs
++++ sources/TerrariaBuildable/Terraria/GameContent/Drawing/TileDrawing.cs
+@@ -6995,7 +_,7 @@
+ 				bool flag2 = _rand.Next(600) == 0;
+ 				if (!flag2)
+ 				{
+-					_windGrid.GetWindTime(i, j, 8, out var windTimeLeft, out var directionX, out directionX);
++					_windGrid.GetWindTime(i, j, 8, out var windTimeLeft, out int directionX, out directionX);
+ 					flag2 = windTimeLeft > 0 && _rand.Next(48) == 0;
+ 				}
+ 				if (flag2)

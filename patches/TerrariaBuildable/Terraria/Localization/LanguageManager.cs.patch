@@ -1,6 +1,6 @@
 --- sources/TerrariaClientWindows/Terraria/Localization/LanguageManager.cs
 +++ sources/TerrariaBuildable/Terraria/Localization/LanguageManager.cs
-@@ -95,7 +_,7 @@
+@@ -86,7 +_,7 @@
  	private string[] GetLanguageFilesForCulture(GameCulture culture)
  	{
  		Assembly.GetExecutingAssembly();

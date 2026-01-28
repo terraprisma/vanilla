@@ -1,6 +1,6 @@
 --- sources/TerrariaClientWindows/ReLogic/ReLogic.csproj
 +++ sources/TerrariaBuildable/ReLogic/ReLogic.csproj
-@@ -1,26 +_,28 @@
+@@ -1,24 +_,28 @@
  <Project Sdk="Microsoft.NET.Sdk">
 -  <Import Project="../Configuration.targets" />
 -  <PropertyGroup>
@@ -23,9 +23,7 @@
 -    <Reference Include="System.Drawing" />
 -    <Reference Include="System.Windows.Forms" />
 -  </ItemGroup>
--  <ItemGroup>
--    <EmbeddedResource Include="Microsoft.Xna.Framework.RuntimeProfile" />
--  </ItemGroup>
+-  <ItemGroup />
 +
 +    <Import Project="../Configuration.targets"/>
 +
