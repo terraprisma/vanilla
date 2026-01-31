@@ -1,6 +1,6 @@
 --- sources/TerrariaClientWindows/Terraria/Player.cs
 +++ sources/TerrariaServerWindows/Terraria/Player.cs
-@@ -27837,11 +_,6 @@
+@@ -27843,11 +_,6 @@
  		{
  			ActiveSections.CheckSection(position);
  		}

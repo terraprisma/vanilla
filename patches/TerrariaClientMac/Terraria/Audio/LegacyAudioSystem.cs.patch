@@ -1,5 +1,13 @@
 --- sources/TerrariaClientWindows/Terraria/Audio/LegacyAudioSystem.cs
 +++ sources/TerrariaClientMac/Terraria/Audio/LegacyAudioSystem.cs
+@@ -4,6 +_,7 @@
+ using System.IO;
+ using Microsoft.Xna.Framework.Audio;
+ using ReLogic.Content.Sources;
++using SDL3;
+ 
+ namespace Terraria.Audio;
+ 
 @@ -36,7 +_,8 @@
  		{
  			if (TrackNamesByIndex.TryGetValue(i, out var value))
@@ -10,3 +18,11 @@
  				IAudioTrack audioTrack = DefaultTrackByIndex[i];
  				IAudioTrack audioTrack2 = audioTrack;
  				IAudioTrack audioTrack3 = FindReplacementTrack(fileSources, assetPath);
+@@ -123,6 +_,7 @@
+ 	public LegacyAudioSystem()
+ 	{
+ 		Engine = new AudioEngine("Content\\TerrariaMusic.xgs");
++		Console.WriteLine("SDL Audio Driver: " + SDL.SDL_GetCurrentAudioDriver());
+ 		SoundBank = new SoundBank(Engine, "Content\\Sound Bank.xsb");
+ 		Engine.Update();
+ 		WaveBank = new WaveBank(Engine, "Content\\Wave Bank.xwb", 0, 512);

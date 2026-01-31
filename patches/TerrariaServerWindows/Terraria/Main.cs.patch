@@ -17,7 +17,7 @@
  {
  	public static class CurrentFrameFlags
  	{
-@@ -4591,10 +_,6 @@
+@@ -4616,10 +_,6 @@
  			_windowMover.TryMovingToScreen(screenDeviceName);
  			ThrottleWhenInactive = configuration.Get("ThrottleWhenInactive", defaultValue: true);
  			UnpinFromCore0 = configuration.Get("UnpinFromCore0", defaultValue: false);
@@ -28,7 +28,7 @@
  		}
  		if (!flag)
  		{
-@@ -6296,7 +_,7 @@
+@@ -6322,7 +_,7 @@
  		{
  			Map = new WorldMap(maxTilesX, maxTilesY);
  			Configuration.Load();
@@ -37,7 +37,7 @@
  			base.Content.RootDirectory = "Content";
  		}
  	}
-@@ -62411,7 +_,7 @@
+@@ -62642,7 +_,7 @@
  
  	private void DrawRainInMenu()
  	{
@@ -46,7 +46,7 @@
  		Microsoft.Xna.Framework.Rectangle[] array = new Microsoft.Xna.Framework.Rectangle[6];
  		for (int i = 0; i < array.Length; i++)
  		{
-@@ -62424,7 +_,7 @@
+@@ -62655,7 +_,7 @@
  			{
  				Rain rain = Main.rain[j];
  				spriteBatch.Draw(TextureAssets.Rain.Value, rain.position - screenPosition, array[rain.type], color, rain.rotation, Vector2.Zero, rain.scale, SpriteEffects.None, 0f);
