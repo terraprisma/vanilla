@@ -1,6 +1,6 @@
 --- sources/TerrariaClientWindows/Terraria/Main.cs
 +++ sources/TerrariaServerWindows/Terraria/Main.cs
-@@ -69,6 +_,7 @@
+@@ -70,6 +_,7 @@
  using Terraria.Map;
  using Terraria.Net;
  using Terraria.ObjectData;
@@ -8,7 +8,7 @@
  using Terraria.Social;
  using Terraria.Testing;
  using Terraria.UI;
-@@ -79,7 +_,7 @@
+@@ -80,7 +_,7 @@
  
  namespace Terraria;
  
@@ -17,18 +17,7 @@
  {
  	public static class CurrentFrameFlags
  	{
-@@ -4616,10 +_,6 @@
- 			_windowMover.TryMovingToScreen(screenDeviceName);
- 			ThrottleWhenInactive = configuration.Get("ThrottleWhenInactive", defaultValue: true);
- 			UnpinFromCore0 = configuration.Get("UnpinFromCore0", defaultValue: false);
--			if (UnpinFromCore0 && Platform.IsWindows)
--			{
--				WindowsPerformanceDiagnostics.UnpinFromCore0();
--			}
- 		}
- 		if (!flag)
- 		{
-@@ -6322,7 +_,7 @@
+@@ -6338,7 +_,7 @@
  		{
  			Map = new WorldMap(maxTilesX, maxTilesY);
  			Configuration.Load();
@@ -37,7 +26,7 @@
  			base.Content.RootDirectory = "Content";
  		}
  	}
-@@ -62642,7 +_,7 @@
+@@ -62678,7 +_,7 @@
  
  	private void DrawRainInMenu()
  	{
@@ -46,7 +35,7 @@
  		Microsoft.Xna.Framework.Rectangle[] array = new Microsoft.Xna.Framework.Rectangle[6];
  		for (int i = 0; i < array.Length; i++)
  		{
-@@ -62655,7 +_,7 @@
+@@ -62691,7 +_,7 @@
  			{
  				Rain rain = Main.rain[j];
  				spriteBatch.Draw(TextureAssets.Rain.Value, rain.position - screenPosition, array[rain.type], color, rain.rotation, Vector2.Zero, rain.scale, SpriteEffects.None, 0f);

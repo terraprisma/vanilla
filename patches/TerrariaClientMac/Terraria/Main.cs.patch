@@ -1,6 +1,6 @@
 --- sources/TerrariaClientWindows/Terraria/Main.cs
 +++ sources/TerrariaClientMac/Terraria/Main.cs
-@@ -27,6 +_,7 @@
+@@ -28,6 +_,7 @@
  using ReLogic.Peripherals.RGB;
  using ReLogic.Threading;
  using ReLogic.Utilities;
@@ -8,7 +8,7 @@
  using Terraria.Achievements;
  using Terraria.Audio;
  using Terraria.Chat;
-@@ -1953,17 +_,17 @@
+@@ -1954,17 +_,17 @@
  
  	public static string CloudPlayerPath = "players";
  
@@ -30,7 +30,7 @@
  
  	public static bool PendingBorderlessState;
  
-@@ -1981,7 +_,7 @@
+@@ -1982,7 +_,7 @@
  
  	public static bool invasionProgressNearInvasion;
  
@@ -39,7 +39,7 @@
  
  	public static int invasionProgressIcon;
  
-@@ -1995,99 +_,27 @@
+@@ -1996,99 +_,27 @@
  
  	public static float invasionProgressAlpha;
  
@@ -147,7 +147,7 @@
  
  	public static bool menuMultiplayer;
  
-@@ -2107,47 +_,47 @@
+@@ -2108,47 +_,47 @@
  
  	public static int lastItemUpdate;
  
@@ -216,7 +216,7 @@
  
  	public static int SmartCursorX;
  
-@@ -2167,45 +_,45 @@
+@@ -2168,45 +_,45 @@
  
  	public static bool SmartInteractPotionOfReturn;
  
@@ -282,7 +282,7 @@
  
  	public static float cursorAlpha;
  
-@@ -2213,25 +_,25 @@
+@@ -2214,25 +_,25 @@
  
  	public static bool signBubble;
  
@@ -316,7 +316,7 @@
  
  	private int splashCounter;
  
-@@ -2255,13 +_,13 @@
+@@ -2256,13 +_,13 @@
  
  	public List<int> DrawCacheFirstFractals = new List<int>(1000);
  
@@ -334,7 +334,7 @@
  
  	private static WindowStateController _windowMover;
  
-@@ -2273,19 +_,19 @@
+@@ -2274,19 +_,19 @@
  
  	public static PlayerResourceSetsManager ResourceSetsManager;
  
@@ -359,7 +359,7 @@
  
  	public static bool autoShutdown;
  
-@@ -2299,19 +_,19 @@
+@@ -2300,19 +_,19 @@
  
  	public static int moondialCooldown;
  
@@ -383,7 +383,7 @@
  
  	private int lastMusicPlayed = -1;
  
-@@ -2319,47 +_,47 @@
+@@ -2320,47 +_,47 @@
  
  	private bool boulderLogo;
  
@@ -450,7 +450,7 @@
  
  	public static GameTipsDisplay gameTips;
  
-@@ -2369,9 +_,9 @@
+@@ -2370,9 +_,9 @@
  
  	public ChumBucketProjectileHelper ChumBucketProjectileHelper = new ChumBucketProjectileHelper();
  
@@ -462,7 +462,7 @@
  
  	private float logoRotation;
  
-@@ -2385,7 +_,7 @@
+@@ -2386,7 +_,7 @@
  
  	private float logoScaleSpeed = 1f;
  
@@ -471,7 +471,7 @@
  
  	private float[] menuItemScale = new float[maxMenuItems];
  
-@@ -2395,7 +_,7 @@
+@@ -2396,7 +_,7 @@
  
  	private int selectedMenu2 = -1;
  
@@ -480,7 +480,7 @@
  
  	public static int selectedWorld;
  
-@@ -2403,33 +_,33 @@
+@@ -2404,33 +_,33 @@
  
  	public static int menuSkip;
  
@@ -527,7 +527,7 @@
  
  	public TilePaintSystemV2 TilePaintSystem;
  
-@@ -2439,7 +_,7 @@
+@@ -2440,7 +_,7 @@
  
  	public IHorizonRenderer HorizonRenderer = new NextHorizonRenderer();
  
@@ -536,7 +536,7 @@
  
  	private AmbientWindSystem _ambientWindSys = new AmbientWindSystem();
  
-@@ -2453,25 +_,21 @@
+@@ -2454,25 +_,21 @@
  
  	private List<DrawData> _voidLensDataSillouette2 = new List<DrawData>();
  
@@ -569,7 +569,7 @@
  
  	private List<int> _occupantsListToDrawNPCHouses = new List<int>();
  
-@@ -2479,31 +_,31 @@
+@@ -2480,31 +_,31 @@
  
  	private bool _imeToggle;
  
@@ -610,7 +610,7 @@
  
  	public static bool mouseText;
  
-@@ -2519,7 +_,7 @@
+@@ -2520,7 +_,7 @@
  
  	public static int selClothes;
  
@@ -619,7 +619,7 @@
  
  	private static int oldClothesStyle;
  
-@@ -2553,41 +_,31 @@
+@@ -2554,41 +_,31 @@
  
  	private static int _itemIconCacheTime;
  
@@ -670,7 +670,7 @@
  
  	private int grabColorSlider;
  
-@@ -2597,11 +_,11 @@
+@@ -2598,11 +_,11 @@
  
  	private bool[] menuWide = new bool[100];
  
@@ -684,7 +684,7 @@
  
  	public RejectionMenuInfo RejectionMenuInfo;
  
-@@ -2619,25 +_,25 @@
+@@ -2620,25 +_,25 @@
  
  	private int[] _drawBackground_tempBack = new int[7];
  
@@ -718,7 +718,7 @@
  
  	private static int thunderDelay;
  
-@@ -2647,19 +_,19 @@
+@@ -2648,19 +_,19 @@
  
  	public static SpriteBatchBeginner LatestSurfaceBackgroundBeginner;
  
@@ -743,7 +743,7 @@
  
  	private float scAdj;
  
-@@ -2671,17 +_,17 @@
+@@ -2672,17 +_,17 @@
  
  	private long presentTimestamp;
  
@@ -765,7 +765,7 @@
  
  	public static Vector2 LastCelestialBodyPosition;
  
-@@ -2689,11 +_,11 @@
+@@ -2690,11 +_,11 @@
  
  	private static TextSnippet[] _netplayStatusTextSnippets;
  
@@ -779,7 +779,7 @@
  
  	public static bool CanUpdateGameplay { get; private set; }
  
-@@ -4169,11 +_,15 @@
+@@ -4170,11 +_,15 @@
  	{
  		try
  		{
@@ -797,7 +797,7 @@
  			using BinaryReader binaryReader = new BinaryReader(input);
  			binaryReader.ReadInt32();
  			for (int i = 0; i < 10; i++)
-@@ -4193,14 +_,18 @@
+@@ -4194,14 +_,18 @@
  		Utils.TryCreatingDirectory(SavePath);
  		try
  		{
@@ -816,9 +816,9 @@
 -			using FileStream output = new FileStream(SavePath + Path.DirectorySeparatorChar + "servers.dat", FileMode.Create);
 +			using FileStream output = new FileStream(savePath2 + directorySeparatorChar + "servers.dat", FileMode.Create);
  			using BinaryWriter binaryWriter = new BinaryWriter(output);
- 			binaryWriter.Write(316);
+ 			binaryWriter.Write(317);
  			for (int i = 0; i < 10; i++)
-@@ -4358,12 +_,16 @@
+@@ -4361,12 +_,16 @@
  
  	protected void LoadSettings()
  	{
@@ -837,7 +837,7 @@
  			}
  			return;
  		}
-@@ -4388,7 +_,7 @@
+@@ -4391,7 +_,7 @@
  		screenBorderlessPendingResizes = (screenBorderless ? 6 : 0);
  		if (Platform.IsWindows && !dedServ)
  		{
@@ -846,7 +846,7 @@
  			if (screenBorderless)
  			{
  				SetBorderlessFormStyle(form);
-@@ -4719,11 +_,15 @@
+@@ -4735,11 +_,15 @@
  	{
  		try
  		{
@@ -864,7 +864,7 @@
  			using BinaryReader binaryReader = new BinaryReader(input);
  			int num = binaryReader.ReadInt32();
  			if (num >= 68)
-@@ -4769,7 +_,7 @@
+@@ -4785,7 +_,7 @@
  				}
  				if (num >= 91 && binaryReader.ReadBoolean() && !dedServ && Platform.IsWindows)
  				{
@@ -873,7 +873,7 @@
  				}
  				if (num >= 4)
  				{
-@@ -4904,20 +_,33 @@
+@@ -4920,20 +_,33 @@
  			text += ((!invalidFileNameChars.Contains(c)) ? ((c != ' ') ? c : '_') : '-');
  		}
  		string text2 = (cloudSave ? CloudPlayerPath : PlayerPath);
@@ -911,7 +911,7 @@
  	}
  
  	public static string GetWorldPathFromName(string worldName, bool cloudSave)
-@@ -4931,20 +_,33 @@
+@@ -4947,20 +_,33 @@
  		text = text.Replace(".", "_");
  		text = text.Replace("*", "_");
  		string text2 = (cloudSave ? CloudWorldPath : WorldPath);
@@ -949,7 +949,7 @@
  	}
  
  	public void setServerWorldRollbacks(string rollBacksToKeep)
-@@ -6323,6 +_,7 @@
+@@ -6339,6 +_,7 @@
  			Map = new WorldMap(maxTilesX, maxTilesY);
  			Configuration.Load();
  			graphics = new GraphicsDeviceManager(this as Game);
@@ -957,16 +957,16 @@
  			base.Content.RootDirectory = "Content";
  		}
  	}
-@@ -17050,7 +_,7 @@
+@@ -17067,7 +_,7 @@
  			hasFocus = base.IsActive || DebugOptions.noPause;
  			if (Platform.IsWindows)
  			{
 -				Form form = Control.FromHandle(base.Window.Handle) as Form;
 +				Form form = Control.FromHandle(base.Window.Handle);
- 				bool num3 = form.WindowState == FormWindowState.Minimized;
+ 				bool num4 = form.WindowState == FormWindowState.Minimized;
  				bool flag = Form.ActiveForm == form;
  				hasFocus |= flag;
-@@ -62642,7 +_,7 @@
+@@ -62678,7 +_,7 @@
  
  	private void DrawRainInMenu()
  	{
@@ -975,7 +975,7 @@
  		Microsoft.Xna.Framework.Rectangle[] array = new Microsoft.Xna.Framework.Rectangle[6];
  		for (int i = 0; i < array.Length; i++)
  		{
-@@ -62655,7 +_,7 @@
+@@ -62691,7 +_,7 @@
  			{
  				Rain rain = Main.rain[j];
  				spriteBatch.Draw(TextureAssets.Rain.Value, rain.position - screenPosition, array[rain.type], color, rain.rotation, Vector2.Zero, rain.scale, SpriteEffects.None, 0f);
@@ -984,7 +984,7 @@
  				{
  					rain.Update();
  				}
-@@ -65788,7 +_,7 @@
+@@ -65824,7 +_,7 @@
  		Form form = null;
  		if (Platform.IsWindows)
  		{
@@ -993,7 +993,7 @@
  			screenMaximized = form.WindowState == FormWindowState.Maximized;
  			if (screenBorderless && screenMaximized && !graphics.IsFullScreen)
  			{
-@@ -66014,5 +_,253 @@
+@@ -66050,5 +_,253 @@
  	public static void WeGameRequireExitGame()
  	{
  		GameAskedToQuit = true;

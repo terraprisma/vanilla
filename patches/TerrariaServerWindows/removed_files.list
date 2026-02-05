@@ -1,9 +1,7 @@
 Terraria\Microsoft.Xna.Framework.RuntimeProfile
 Terraria\Audio\MP3AudioTrack.cs
 Terraria\Audio\OGGAudioTrack.cs
-Terraria\IO\ResourcePackContentValidator.cs
 Terraria\Libraries\NVorbis.System.ValueTuple.dll
 Terraria\Testing\FxReader.cs
-Terraria\Testing\WindowsPerformanceDiagnostics.cs
 Terraria\Libraries\MP3Sharp\MP3Sharp.dll
 Terraria\Libraries\NVorbis\NVorbis.dll

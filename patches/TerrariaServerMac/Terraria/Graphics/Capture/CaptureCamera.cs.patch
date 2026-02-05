@@ -1,6 +1,6 @@
 --- sources/TerrariaServerWindows/Terraria/Graphics/Capture/CaptureCamera.cs
 +++ sources/TerrariaServerMac/Terraria/Graphics/Capture/CaptureCamera.cs
-@@ -281,7 +_,11 @@
+@@ -280,7 +_,11 @@
  
  	public static bool SaveImage(byte[] data, int width, int height, ImageFormat imageFormat, string filename)
  	{
@@ -13,7 +13,7 @@
  		{
  			return false;
  		}
-@@ -313,7 +_,21 @@
+@@ -312,7 +_,21 @@
  
  	private void SaveImage(Texture2D texture, int width, int height, ImageFormat imageFormat, string foldername, string filename)
  	{
@@ -36,7 +36,7 @@
  		string text2 = Path.Combine(text, filename);
  		if (!Utils.TryCreatingDirectory(text))
  		{
-@@ -373,8 +_,31 @@
+@@ -372,8 +_,31 @@
  		if (_activeSettings.UseScaling && _outputData != null)
  		{
  			int num = 0;

@@ -1,6 +1,6 @@
 --- sources/TerrariaClientWindows/Terraria/Map/MapHelper.cs
 +++ sources/TerrariaClientMac/Terraria/Map/MapHelper.cs
-@@ -3030,7 +_,9 @@
+@@ -3036,7 +_,9 @@
  		{
  			Utils.TryCreatingDirectory(text);
  		}
