@@ -17,7 +17,7 @@
  {
  	public static class CurrentFrameFlags
  	{
-@@ -6338,7 +_,7 @@
+@@ -6342,7 +_,7 @@
  		{
  			Map = new WorldMap(maxTilesX, maxTilesY);
  			Configuration.Load();
@@ -26,21 +26,3 @@
  			base.Content.RootDirectory = "Content";
  		}
  	}
-@@ -62678,7 +_,7 @@
- 
- 	private void DrawRainInMenu()
- 	{
--		bool flag = base.IsActive;
-+		bool isActive = base.IsActive;
- 		Microsoft.Xna.Framework.Rectangle[] array = new Microsoft.Xna.Framework.Rectangle[6];
- 		for (int i = 0; i < array.Length; i++)
- 		{
-@@ -62691,7 +_,7 @@
- 			{
- 				Rain rain = Main.rain[j];
- 				spriteBatch.Draw(TextureAssets.Rain.Value, rain.position - screenPosition, array[rain.type], color, rain.rotation, Vector2.Zero, rain.scale, SpriteEffects.None, 0f);
--				if (flag)
-+				if (isActive)
- 				{
- 					rain.Update();
- 				}

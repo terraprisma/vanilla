@@ -1,0 +1,11 @@
+--- sources/TerrariaServerWindows/Terraria/FocusHelper.cs
++++ sources/TerrariaServerMac/Terraria/FocusHelper.cs
+@@ -140,7 +_,7 @@
+ 		IsSelectedApplication = Main.instance.IsActive;
+ 		if (Platform.IsWindows)
+ 		{
+-			Form form = Control.FromHandle(Main.instance.Window.Handle) as Form;
++			Form form = Control.FromHandle(Main.instance.Window.Handle);
+ 			bool num = form.WindowState == FormWindowState.Minimized;
+ 			bool flag2 = Form.ActiveForm == form;
+ 			IsSelectedApplication |= flag2;
