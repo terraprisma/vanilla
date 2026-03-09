@@ -17,7 +17,7 @@
  {
  	public static class CurrentFrameFlags
  	{
-@@ -6342,7 +_,7 @@
+@@ -6344,7 +_,7 @@
  		{
  			Map = new WorldMap(maxTilesX, maxTilesY);
  			Configuration.Load();

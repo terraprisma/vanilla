@@ -1,6 +1,6 @@
 --- sources/TerrariaClientWindows/Terraria/Initializers/ChromaInitializer.cs
 +++ sources/TerrariaServerWindows/Terraria/Initializers/ChromaInitializer.cs
-@@ -1,34 +_,11 @@
+@@ -1,33 +_,11 @@
 -using System;
 -using System.Collections.Generic;
 -using System.Diagnostics;
@@ -18,7 +18,6 @@
 -using SteelSeries.GameSense.DeviceZone;
 -using Terraria.GameContent.RGB;
 -using Terraria.GameInput;
--using Terraria.Graphics.Effects;
  using Terraria.IO;
  
  namespace Terraria.Initializers;
@@ -35,7 +34,7 @@
  	private static ChromaEngine _engine;
  
  	private const string GAME_NAME_ID = "TERRARIA";
-@@ -51,492 +_,6 @@
+@@ -50,492 +_,6 @@
  
  	private static VendorColorProfile _steelSeriesColorProfile = new VendorColorProfile();
  
@@ -528,7 +527,7 @@
  	public static void BindTo(Preferences preferences)
  	{
  		preferences.OnSave += Configuration_OnSave;
-@@ -589,165 +_,6 @@
+@@ -588,165 +_,6 @@
  		preferences.Put("SteelSeriesColorProfile", _steelSeriesColorProfile);
  	}
  
@@ -694,7 +693,7 @@
  	public static void DisableAllDeviceGroups()
  	{
  		if (_engine != null)
-@@ -756,132 +_,12 @@
+@@ -755,129 +_,12 @@
  		}
  	}
  
@@ -823,8 +822,5 @@
 +	public static void UpdateEvents()
  	{
 -		new BasicDebugDrawer(Main.instance.GraphicsDevice);
--		Filters.Scene.OnPostDraw += delegate
--		{
--		};
  	}
  }

@@ -8,7 +8,7 @@
  using Terraria.Achievements;
  using Terraria.Audio;
  using Terraria.Chat;
-@@ -1953,17 +_,17 @@
+@@ -1955,17 +_,17 @@
  
  	public static string CloudPlayerPath = "players";
  
@@ -30,7 +30,7 @@
  
  	public static bool PendingBorderlessState;
  
-@@ -1981,7 +_,7 @@
+@@ -1983,7 +_,7 @@
  
  	public static bool invasionProgressNearInvasion;
  
@@ -39,7 +39,7 @@
  
  	public static int invasionProgressIcon;
  
-@@ -1995,99 +_,27 @@
+@@ -1997,99 +_,27 @@
  
  	public static float invasionProgressAlpha;
  
@@ -147,7 +147,7 @@
  
  	public static bool menuMultiplayer;
  
-@@ -2107,47 +_,47 @@
+@@ -2109,47 +_,47 @@
  
  	public static int lastItemUpdate;
  
@@ -216,7 +216,7 @@
  
  	public static int SmartCursorX;
  
-@@ -2167,45 +_,45 @@
+@@ -2169,45 +_,45 @@
  
  	public static bool SmartInteractPotionOfReturn;
  
@@ -282,7 +282,7 @@
  
  	public static float cursorAlpha;
  
-@@ -2213,25 +_,25 @@
+@@ -2215,25 +_,25 @@
  
  	public static bool signBubble;
  
@@ -316,7 +316,7 @@
  
  	private int splashCounter;
  
-@@ -2255,13 +_,13 @@
+@@ -2257,13 +_,13 @@
  
  	public List<int> DrawCacheFirstFractals = new List<int>(1000);
  
@@ -334,7 +334,7 @@
  
  	private static WindowStateController _windowMover;
  
-@@ -2273,19 +_,19 @@
+@@ -2275,19 +_,19 @@
  
  	public static PlayerResourceSetsManager ResourceSetsManager;
  
@@ -359,7 +359,7 @@
  
  	public static bool autoShutdown;
  
-@@ -2299,19 +_,19 @@
+@@ -2301,21 +_,21 @@
  
  	public static int moondialCooldown;
  
@@ -375,6 +375,8 @@
  
  	private IEnumerator _gameContentLoadProcess;
  
+ 	private int _musicSilencerCounter;
+ 
 -	public static bool _shouldUseWindyDayMusic = false;
 +	public static bool _shouldUseWindyDayMusic;
  
@@ -383,7 +385,7 @@
  
  	private int lastMusicPlayed = -1;
  
-@@ -2319,47 +_,47 @@
+@@ -2323,47 +_,47 @@
  
  	private bool boulderLogo;
  
@@ -450,7 +452,7 @@
  
  	public static GameTipsDisplay gameTips;
  
-@@ -2369,9 +_,9 @@
+@@ -2373,9 +_,9 @@
  
  	public ChumBucketProjectileHelper ChumBucketProjectileHelper = new ChumBucketProjectileHelper();
  
@@ -462,7 +464,7 @@
  
  	private float logoRotation;
  
-@@ -2385,7 +_,7 @@
+@@ -2389,7 +_,7 @@
  
  	private float logoScaleSpeed = 1f;
  
@@ -471,7 +473,7 @@
  
  	private float[] menuItemScale = new float[maxMenuItems];
  
-@@ -2395,7 +_,7 @@
+@@ -2399,7 +_,7 @@
  
  	private int selectedMenu2 = -1;
  
@@ -480,7 +482,7 @@
  
  	public static int selectedWorld;
  
-@@ -2403,33 +_,33 @@
+@@ -2407,33 +_,33 @@
  
  	public static int menuSkip;
  
@@ -527,7 +529,7 @@
  
  	public TilePaintSystemV2 TilePaintSystem;
  
-@@ -2439,7 +_,7 @@
+@@ -2443,7 +_,7 @@
  
  	public IHorizonRenderer HorizonRenderer = new NextHorizonRenderer();
  
@@ -538,7 +540,7 @@
  
 @@ -2453,25 +_,21 @@
  
- 	private List<DrawData> _voidLensDataSillouette2 = new List<DrawData>();
+ 	private List<DrawData> _voidLensData = new List<DrawData>();
  
 -	private static BlendState _multiplyBlendState = null;
 +	private static BlendState _multiplyBlendState;
@@ -589,8 +591,8 @@
  
  	private int[] _npcIndexWhoHoldsHeadIndex = new int[NPCHeadID.Count];
  
--	private static List<string> _requiredObjecsForCraftingText = new List<string>();
-+	private static List<string> _requiredObjecsForCraftingText;
+-	private static List<string> _requiredObjectsForCraftingText = new List<string>();
++	private static List<string> _requiredObjectsForCraftingText;
  
  	public static bool _preventCraftingBecauseClickWasUsedToChangeFocusedRecipe;
  
@@ -779,7 +781,7 @@
  
  	public static bool CanUpdateGameplay { get; private set; }
  
-@@ -4169,11 +_,15 @@
+@@ -4171,11 +_,15 @@
  	{
  		try
  		{
@@ -797,7 +799,7 @@
  			using BinaryReader binaryReader = new BinaryReader(input);
  			binaryReader.ReadInt32();
  			for (int i = 0; i < 10; i++)
-@@ -4193,14 +_,18 @@
+@@ -4195,14 +_,18 @@
  		Utils.TryCreatingDirectory(SavePath);
  		try
  		{
@@ -816,9 +818,9 @@
 -			using FileStream output = new FileStream(SavePath + Path.DirectorySeparatorChar + "servers.dat", FileMode.Create);
 +			using FileStream output = new FileStream(savePath2 + directorySeparatorChar + "servers.dat", FileMode.Create);
  			using BinaryWriter binaryWriter = new BinaryWriter(output);
- 			binaryWriter.Write(318);
+ 			binaryWriter.Write(319);
  			for (int i = 0; i < 10; i++)
-@@ -4363,12 +_,16 @@
+@@ -4365,12 +_,16 @@
  
  	protected void LoadSettings()
  	{
@@ -837,7 +839,7 @@
  			}
  			return;
  		}
-@@ -4393,7 +_,7 @@
+@@ -4395,7 +_,7 @@
  		screenBorderlessPendingResizes = (screenBorderless ? 6 : 0);
  		if (Platform.IsWindows && !dedServ)
  		{
@@ -846,7 +848,7 @@
  			if (screenBorderless)
  			{
  				SetBorderlessFormStyle(form);
-@@ -4740,11 +_,15 @@
+@@ -4742,11 +_,15 @@
  	{
  		try
  		{
@@ -864,7 +866,7 @@
  			using BinaryReader binaryReader = new BinaryReader(input);
  			int num = binaryReader.ReadInt32();
  			if (num >= 68)
-@@ -4790,7 +_,7 @@
+@@ -4792,7 +_,7 @@
  				}
  				if (num >= 91 && binaryReader.ReadBoolean() && !dedServ && Platform.IsWindows)
  				{
@@ -873,7 +875,7 @@
  				}
  				if (num >= 4)
  				{
-@@ -4925,20 +_,33 @@
+@@ -4927,20 +_,33 @@
  			text += ((!invalidFileNameChars.Contains(c)) ? ((c != ' ') ? c : '_') : '-');
  		}
  		string text2 = (cloudSave ? CloudPlayerPath : PlayerPath);
@@ -911,7 +913,7 @@
  	}
  
  	public static string GetWorldPathFromName(string worldName, bool cloudSave)
-@@ -4952,20 +_,33 @@
+@@ -4954,20 +_,33 @@
  		text = text.Replace(".", "_");
  		text = text.Replace("*", "_");
  		string text2 = (cloudSave ? CloudWorldPath : WorldPath);
@@ -949,7 +951,7 @@
  	}
  
  	public void setServerWorldRollbacks(string rollBacksToKeep)
-@@ -6344,6 +_,7 @@
+@@ -6346,6 +_,7 @@
  			Map = new WorldMap(maxTilesX, maxTilesY);
  			Configuration.Load();
  			graphics = new GraphicsDeviceManager(this as Microsoft.Xna.Framework.Game);
@@ -957,7 +959,7 @@
  			base.Content.RootDirectory = "Content";
  		}
  	}
-@@ -65790,7 +_,7 @@
+@@ -65734,7 +_,7 @@
  		Form form = null;
  		if (Platform.IsWindows)
  		{
@@ -966,7 +968,7 @@
  			screenMaximized = form.WindowState == FormWindowState.Maximized;
  			if (screenBorderless && screenMaximized && !graphics.IsFullScreen)
  			{
-@@ -66016,5 +_,253 @@
+@@ -65960,5 +_,253 @@
  	public static void WeGameRequireExitGame()
  	{
  		GameAskedToQuit = true;
@@ -1172,7 +1174,7 @@
 +		shopHappinessTextOffsetY = 98;
 +		shopHappinessIconOffsetX = 12;
 +		shopHappinessIconOffsetY = 108;
-+		_requiredObjecsForCraftingText = new List<string>();
++		_requiredObjectsForCraftingText = new List<string>();
 +		_currentRecipeBeingCrafted = -1;
 +		hidePVPAndTeamIcons = false;
 +		hoverItemName = "";

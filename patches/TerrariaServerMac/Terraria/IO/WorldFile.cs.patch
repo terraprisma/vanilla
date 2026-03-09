@@ -1,6 +1,6 @@
 --- sources/TerrariaServerWindows/Terraria/IO/WorldFile.cs
 +++ sources/TerrariaServerMac/Terraria/IO/WorldFile.cs
-@@ -672,7 +_,9 @@
+@@ -665,7 +_,9 @@
  			{
  				for (int num = Main.worldPathName.Length - 1; num >= 0; num--)
  				{
@@ -11,7 +11,7 @@
  					{
  						Utils.TryCreatingDirectory(Main.worldPathName.Substring(0, num));
  						break;
-@@ -680,15 +_,15 @@
+@@ -673,15 +_,15 @@
  				}
  			}
  			Main.ActiveWorldFileData = CreateMetadata((Main.worldName == "") ? "World" : Main.worldName, _isWorldOnCloud, Main.GameMode);
@@ -31,7 +31,7 @@
  				WorldGenerationOptions.SelectOption(optionFromSeedText);
  				foreach (AWorldGenerationOption option in WorldGenerationOptions.Options)
  				{
-@@ -697,13 +_,13 @@
+@@ -690,13 +_,13 @@
  						option.Enabled = true;
  					}
  				}

@@ -7,7 +7,7 @@
  using System.IO;
  using System.Reflection;
  using System.Runtime.CompilerServices;
-@@ -156,10 +_,6 @@
+@@ -154,10 +_,6 @@
  
  	private static void InitializeConsoleOutput()
  	{
@@ -18,7 +18,7 @@
  		try
  		{
  			Console.OutputEncoding = Encoding.UTF8;
-@@ -196,6 +_,7 @@
+@@ -194,6 +_,7 @@
  
  	public static void RunGame()
  	{
