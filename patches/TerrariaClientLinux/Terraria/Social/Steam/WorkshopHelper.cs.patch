@@ -10,7 +10,7 @@
  						if (!File.Exists(path))
  						{
  							continue;
-@@ -213,7 +_,8 @@
+@@ -211,7 +_,8 @@
  					Visibility = visibility
  				};
  				ulong? num = null;
@@ -20,7 +20,7 @@
  				{
  					num = info.workshopEntryId;
  				}
-@@ -348,7 +_,8 @@
+@@ -358,7 +_,8 @@
  
  			private bool TryWritingManifestToFolder(string folderPath, string manifestText)
  			{
@@ -30,7 +30,7 @@
  				bool result = true;
  				try
  				{
-@@ -416,11 +_,17 @@
+@@ -426,11 +_,17 @@
  			{
  				if (_world.IsCloudSave)
  				{

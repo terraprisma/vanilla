@@ -1,0 +1,11 @@
+--- sources/TerrariaClientWindows/Terraria/GameContent/PlayerDamageTracker.cs
++++ sources/TerrariaClientLinux/Terraria/GameContent/PlayerDamageTracker.cs
+@@ -132,7 +_,7 @@
+ 			stringBuilder2.Append('{').Append(list.Count).Append('}');
+ 			list.Add(creditEntry.Name);
+ 			stringBuilder2.Append(" - ").Append(creditEntry.HitCount).Append(" hits");
+-			stringBuilder.Append('\n').Append(stringBuilder2);
++			stringBuilder.Append('\n').Append((object)stringBuilder2);
+ 		}
+ 		string text = stringBuilder.ToString();
+ 		object[] substitutions = list.ToArray();

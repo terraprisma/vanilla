@@ -1,6 +1,6 @@
 --- sources/TerrariaClientWindows/Terraria/Localization/LanguageManager.cs
 +++ sources/TerrariaClientLinux/Terraria/Localization/LanguageManager.cs
-@@ -188,7 +_,8 @@
+@@ -192,7 +_,8 @@
  	private void LoadFromContentSources()
  	{
  		string name = ActiveCulture.Name;
@@ -10,7 +10,7 @@
  		foreach (IContentSource contentSource in _contentSources)
  		{
  			foreach (string item in contentSource.GetAllAssetsStartingWith(assetNameStart))
-@@ -292,7 +_,7 @@
+@@ -296,7 +_,7 @@
  
  	private bool UpdateTextValue(string key, string value)
  	{

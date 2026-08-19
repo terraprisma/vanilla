@@ -1,0 +1,19 @@
+--- sources/TerrariaServerWindows/Terraria/Testing/DebugOverrides.cs
++++ sources/TerrariaServerLinux/Terraria/Testing/DebugOverrides.cs
+@@ -1,16 +_,11 @@
+ using System.Collections.Generic;
+ using System.Diagnostics;
+-using ReLogic.Content;
+ 
+ namespace Terraria.Testing;
+ 
+ internal class DebugOverrides
+ {
+ 	public static Dictionary<string, double> Overrides;
+-
+-	private static readonly FileChangeWatcher<int> _changeWatcher = new FileChangeWatcher<int>();
+-
+-	private static uint lastWatcherCheck = Main.GameUpdateCount;
+ 
+ 	[Conditional("DEBUG")]
+ 	public static void Replace(string key, ref int value)

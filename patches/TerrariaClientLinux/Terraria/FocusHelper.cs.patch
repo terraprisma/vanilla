@@ -1,7 +1,7 @@
 --- sources/TerrariaClientWindows/Terraria/FocusHelper.cs
 +++ sources/TerrariaClientLinux/Terraria/FocusHelper.cs
-@@ -140,7 +_,7 @@
- 		IsSelectedApplication = Main.instance.IsActive;
+@@ -141,7 +_,7 @@
+ 		wantsToPause = !IsSelectedApplication && Main.netMode == 0 && flag;
  		if (Platform.IsWindows)
  		{
 -			Form form = Control.FromHandle(Main.instance.Window.Handle) as Form;
