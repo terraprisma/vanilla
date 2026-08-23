@@ -820,7 +820,7 @@
 -			using FileStream output = new FileStream(SavePath + Path.DirectorySeparatorChar + "servers.dat", FileMode.Create);
 +			using FileStream output = new FileStream(savePath2 + directorySeparatorChar + "servers.dat", FileMode.Create);
  			using BinaryWriter binaryWriter = new BinaryWriter(output);
- 			binaryWriter.Write(325);
+ 			binaryWriter.Write(326);
  			for (int i = 0; i < 10; i++)
 @@ -4429,12 +_,16 @@
  
@@ -961,7 +961,7 @@
  			base.Content.RootDirectory = "Content";
  		}
  	}
-@@ -67234,7 +_,7 @@
+@@ -67240,7 +_,7 @@
  		Form form = null;
  		if (Platform.IsWindows)
  		{
@@ -970,7 +970,7 @@
  			screenMaximized = form.WindowState == FormWindowState.Maximized;
  			if (screenBorderless && screenMaximized && !graphics.IsFullScreen)
  			{
-@@ -67460,5 +_,253 @@
+@@ -67466,5 +_,253 @@
  	public static void WeGameRequireExitGame()
  	{
  		GameAskedToQuit = true;
