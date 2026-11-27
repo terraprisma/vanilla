@@ -1,6 +1,6 @@
 --- sources/TerrariaClientWindows/Terraria/Main.cs
 +++ sources/TerrariaClientLinux/Terraria/Main.cs
-@@ -28,6 +_,7 @@
+@@ -29,6 +_,7 @@
  using ReLogic.Peripherals.RGB;
  using ReLogic.Threading;
  using ReLogic.Utilities;
@@ -8,7 +8,7 @@
  using Terraria.Achievements;
  using Terraria.Audio;
  using Terraria.Chat;
-@@ -1973,17 +_,17 @@
+@@ -1998,17 +_,17 @@
  
  	public static string CloudPlayerPath = "players";
  
@@ -30,7 +30,7 @@
  
  	public static bool PendingBorderlessState;
  
-@@ -2001,7 +_,7 @@
+@@ -2026,7 +_,7 @@
  
  	public static bool invasionProgressNearInvasion;
  
@@ -39,7 +39,7 @@
  
  	public static int invasionProgressIcon;
  
-@@ -2015,99 +_,27 @@
+@@ -2040,99 +_,27 @@
  
  	public static float invasionProgressAlpha;
  
@@ -147,7 +147,7 @@
  
  	public static bool menuMultiplayer;
  
-@@ -2127,47 +_,47 @@
+@@ -2154,47 +_,47 @@
  
  	public static int lastItemUpdate;
  
@@ -216,7 +216,7 @@
  
  	public static int SmartCursorX;
  
-@@ -2187,45 +_,45 @@
+@@ -2214,45 +_,45 @@
  
  	public static bool SmartInteractPotionOfReturn;
  
@@ -282,7 +282,7 @@
  
  	public static float cursorAlpha;
  
-@@ -2233,25 +_,25 @@
+@@ -2260,25 +_,25 @@
  
  	public static bool signBubble;
  
@@ -316,7 +316,7 @@
  
  	private int splashCounter;
  
-@@ -2275,13 +_,13 @@
+@@ -2302,13 +_,13 @@
  
  	public List<int> DrawCacheFirstFractals = new List<int>(1000);
  
@@ -334,7 +334,7 @@
  
  	private static WindowStateController _windowMover;
  
-@@ -2293,19 +_,19 @@
+@@ -2320,19 +_,19 @@
  
  	public static PlayerResourceSetsManager ResourceSetsManager;
  
@@ -359,7 +359,7 @@
  
  	public static bool autoShutdown;
  
-@@ -2319,21 +_,21 @@
+@@ -2346,21 +_,21 @@
  
  	public static int moondialCooldown;
  
@@ -385,7 +385,7 @@
  
  	private int lastMusicPlayed = -1;
  
-@@ -2341,47 +_,47 @@
+@@ -2368,47 +_,47 @@
  
  	private bool boulderLogo;
  
@@ -452,7 +452,7 @@
  
  	public static GameTipsDisplay gameTips;
  
-@@ -2389,9 +_,9 @@
+@@ -2416,9 +_,9 @@
  
  	public ChumBucketProjectileHelper ChumBucketProjectileHelper = new ChumBucketProjectileHelper();
  
@@ -464,7 +464,7 @@
  
  	private float logoRotation;
  
-@@ -2405,7 +_,7 @@
+@@ -2432,7 +_,7 @@
  
  	private float logoScaleSpeed = 1f;
  
@@ -473,7 +473,7 @@
  
  	private float[] menuItemScale = new float[maxMenuItems];
  
-@@ -2415,7 +_,7 @@
+@@ -2442,7 +_,7 @@
  
  	private int selectedMenu2 = -1;
  
@@ -482,7 +482,7 @@
  
  	public static int selectedWorld;
  
-@@ -2423,33 +_,33 @@
+@@ -2450,33 +_,33 @@
  
  	public static int menuSkip;
  
@@ -529,7 +529,7 @@
  
  	public TilePaintSystemV2 TilePaintSystem;
  
-@@ -2459,7 +_,7 @@
+@@ -2486,7 +_,7 @@
  
  	public IHorizonRenderer HorizonRenderer = new NextHorizonRenderer();
  
@@ -538,7 +538,7 @@
  
  	private AmbientWindSystem _ambientWindSys = new AmbientWindSystem();
  
-@@ -2469,25 +_,21 @@
+@@ -2496,25 +_,21 @@
  
  	private List<DrawData> _voidLensData = new List<DrawData>();
  
@@ -571,7 +571,7 @@
  
  	private List<int> _occupantsListToDrawNPCHouses = new List<int>();
  
-@@ -2495,31 +_,31 @@
+@@ -2522,31 +_,31 @@
  
  	private bool _imeToggle;
  
@@ -612,7 +612,7 @@
  
  	public static bool mouseText;
  
-@@ -2535,7 +_,7 @@
+@@ -2562,7 +_,7 @@
  
  	public static int selClothes;
  
@@ -621,7 +621,7 @@
  
  	private static int oldClothesStyle;
  
-@@ -2573,41 +_,31 @@
+@@ -2600,41 +_,31 @@
  
  	private static int _itemIconCacheTime;
  
@@ -672,7 +672,7 @@
  
  	private int grabColorSlider;
  
-@@ -2617,11 +_,11 @@
+@@ -2644,15 +_,15 @@
  
  	private bool[] menuWide = new bool[100];
  
@@ -686,7 +686,12 @@
  
  	public RejectionMenuInfo RejectionMenuInfo;
  
-@@ -2639,25 +_,25 @@
+-	private static int RecentDeleteEntry = -1;
++	private static int RecentDeleteEntry;
+ 
+ 	private float _splashFrameCount;
+ 
+@@ -2668,25 +_,25 @@
  
  	private int[] _drawBackground_tempBack = new int[7];
  
@@ -720,7 +725,7 @@
  
  	private static int thunderDelay;
  
-@@ -2667,19 +_,19 @@
+@@ -2696,19 +_,19 @@
  
  	public static SpriteBatchBeginner LatestSurfaceBackgroundBeginner;
  
@@ -745,7 +750,7 @@
  
  	private float scAdj;
  
-@@ -2691,19 +_,19 @@
+@@ -2720,19 +_,19 @@
  
  	private long presentTimestamp;
  
@@ -769,7 +774,7 @@
  
  	public static Vector2 LastCelestialBodyPosition;
  
-@@ -2711,11 +_,11 @@
+@@ -2740,11 +_,11 @@
  
  	private static TextSnippet[] _netplayStatusTextSnippets;
  
@@ -783,49 +788,27 @@
  
  	public static bool CanUpdateGameplay { get; private set; }
  
-@@ -4222,11 +_,15 @@
- 	{
- 		try
- 		{
-+			string savePath = SavePath;
-+			char directorySeparatorChar = Path.DirectorySeparatorChar;
--			if (!File.Exists(SavePath + Path.DirectorySeparatorChar + "servers.dat"))
-+			if (!File.Exists(savePath + directorySeparatorChar + "servers.dat"))
- 			{
- 				return;
- 			}
-+			string savePath2 = SavePath;
-+			directorySeparatorChar = Path.DirectorySeparatorChar;
--			using FileStream input = new FileStream(SavePath + Path.DirectorySeparatorChar + "servers.dat", FileMode.Open);
-+			using FileStream input = new FileStream(savePath2 + directorySeparatorChar + "servers.dat", FileMode.Open);
- 			using BinaryReader binaryReader = new BinaryReader(input);
- 			binaryReader.ReadInt32();
- 			for (int i = 0; i < 10; i++)
-@@ -4246,14 +_,18 @@
- 		Utils.TryCreatingDirectory(SavePath);
- 		try
- 		{
-+			string savePath = SavePath;
-+			char directorySeparatorChar = Path.DirectorySeparatorChar;
--			File.SetAttributes(SavePath + Path.DirectorySeparatorChar + "servers.dat", FileAttributes.Normal);
-+			File.SetAttributes(savePath + directorySeparatorChar + "servers.dat", FileAttributes.Normal);
+@@ -3110,7 +_,15 @@
  		}
- 		catch
- 		{
- 		}
- 		try
- 		{
-+			string savePath2 = SavePath;
-+			char directorySeparatorChar = Path.DirectorySeparatorChar;
--			using FileStream output = new FileStream(SavePath + Path.DirectorySeparatorChar + "servers.dat", FileMode.Create);
-+			using FileStream output = new FileStream(savePath2 + directorySeparatorChar + "servers.dat", FileMode.Create);
- 			using BinaryWriter binaryWriter = new BinaryWriter(output);
- 			binaryWriter.Write(326);
- 			for (int i = 0; i < 10; i++)
-@@ -4429,12 +_,16 @@
+ 	}
  
+-	private static string RecentDedicatedServersFile => SavePath + Path.DirectorySeparatorChar + "servers.dat";
++	private static string RecentDedicatedServersFile
++	{
++		get
++		{
++			string savePath = SavePath;
++			char directorySeparatorChar = Path.DirectorySeparatorChar;
++			return savePath + directorySeparatorChar + "servers.dat";
++		}
++	}
+ 
+ 	public static bool IsItAHappyWindyDay => _shouldUseWindyDayMusic;
+ 
+@@ -4520,12 +_,16 @@
  	protected void LoadSettings()
  	{
+ 		Netplay.UseUPNP = false;
 +		string savePath = SavePath;
 +		char directorySeparatorChar = Path.DirectorySeparatorChar;
 -		if (File.Exists(SavePath + Path.DirectorySeparatorChar + "config.dat"))
@@ -841,7 +824,7 @@
  			}
  			return;
  		}
-@@ -4459,7 +_,7 @@
+@@ -4550,7 +_,7 @@
  		screenBorderlessPendingResizes = (screenBorderless ? 6 : 0);
  		if (Platform.IsWindows && !dedServ)
  		{
@@ -850,7 +833,7 @@
  			if (screenBorderless)
  			{
  				SetBorderlessFormStyle(form);
-@@ -4807,11 +_,15 @@
+@@ -4899,11 +_,15 @@
  	{
  		try
  		{
@@ -868,7 +851,7 @@
  			using BinaryReader binaryReader = new BinaryReader(input);
  			int num = binaryReader.ReadInt32();
  			if (num >= 68)
-@@ -4857,7 +_,7 @@
+@@ -4949,7 +_,7 @@
  				}
  				if (num >= 91 && binaryReader.ReadBoolean() && !dedServ && Platform.IsWindows)
  				{
@@ -877,7 +860,7 @@
  				}
  				if (num >= 4)
  				{
-@@ -4992,20 +_,33 @@
+@@ -5084,20 +_,33 @@
  			text += ((!invalidFileNameChars.Contains(c)) ? ((c != ' ') ? c : '_') : '-');
  		}
  		string text2 = (cloudSave ? CloudPlayerPath : PlayerPath);
@@ -915,7 +898,7 @@
  	}
  
  	public static string GetWorldPathFromName(string worldName, bool cloudSave)
-@@ -5019,20 +_,33 @@
+@@ -5111,20 +_,33 @@
  		text = text.Replace(".", "_");
  		text = text.Replace("*", "_");
  		string text2 = (cloudSave ? CloudWorldPath : WorldPath);
@@ -953,7 +936,7 @@
  	}
  
  	public void setServerWorldRollbacks(string rollBacksToKeep)
-@@ -6529,6 +_,7 @@
+@@ -6628,6 +_,7 @@
  			Map = new WorldMap(maxTilesX, maxTilesY);
  			Configuration.Load();
  			graphics = new GraphicsDeviceManager(this as Game);
@@ -961,7 +944,7 @@
  			base.Content.RootDirectory = "Content";
  		}
  	}
-@@ -67240,7 +_,7 @@
+@@ -67556,7 +_,7 @@
  		Form form = null;
  		if (Platform.IsWindows)
  		{
@@ -970,7 +953,7 @@
  			screenMaximized = form.WindowState == FormWindowState.Maximized;
  			if (screenBorderless && screenMaximized && !graphics.IsFullScreen)
  			{
-@@ -67466,5 +_,253 @@
+@@ -67782,5 +_,254 @@
  	public static void WeGameRequireExitGame()
  	{
  		GameAskedToQuit = true;
@@ -1203,6 +1186,7 @@
 +		aBar = 1f;
 +		GamepadCursorAlpha = 0f;
 +		MenuXMovement = 0f;
++		RecentDeleteEntry = -1;
 +		InitialMapScale = 1f;
 +		MapScale = 1f;
 +		_minimapTopRightAnchorOffsetTowardsLeft = 52;

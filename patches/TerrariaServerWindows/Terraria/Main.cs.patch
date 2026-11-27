@@ -1,6 +1,6 @@
 --- sources/TerrariaClientWindows/Terraria/Main.cs
 +++ sources/TerrariaServerWindows/Terraria/Main.cs
-@@ -71,6 +_,7 @@
+@@ -72,6 +_,7 @@
  using Terraria.Net;
  using Terraria.ObjectData;
  using Terraria.Physics;
@@ -8,7 +8,7 @@
  using Terraria.Social;
  using Terraria.Social.Base;
  using Terraria.Testing;
-@@ -82,7 +_,7 @@
+@@ -83,7 +_,7 @@
  
  namespace Terraria;
  
@@ -17,7 +17,7 @@
  {
  	public static class CurrentFrameFlags
  	{
-@@ -6528,7 +_,7 @@
+@@ -6627,7 +_,7 @@
  		{
  			Map = new WorldMap(maxTilesX, maxTilesY);
  			Configuration.Load();

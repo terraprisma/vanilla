@@ -10,8 +10,8 @@
 +using SDL3;
  using Terraria.Initializers;
  using Terraria.Localization;
- using Terraria.Social;
-@@ -17,9 +_,9 @@
+ using Terraria.Net.Sockets;
+@@ -18,9 +_,9 @@
  
  public static class Program
  {
@@ -23,7 +23,7 @@
  
  	public static bool IsMono = Type.GetType("Mono.Runtime") != null;
  
-@@ -237,6 +_,11 @@
+@@ -239,6 +_,11 @@
  
  	private static void LogFNANativeLibVersions()
  	{
